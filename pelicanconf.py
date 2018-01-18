@@ -20,9 +20,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
+LINKS = (('ImpactStory', 'https://profiles.impactstory.org/u/0000-0003-4413-0651'),
+         ('ResearchGate', 'https://www.researchgate.net/profile/Hidemasa_Bono'),
+         ('ResearchMap', 'https://researchmap.jp/bonohu/?lang=english'),
+         ('PubMed', 'https://www.ncbi.nlm.nih.gov/pubmed?cmd=search&term=Bono%20H[au]%20AND%201995%3A2100[dp]%20NOT%20jpn[la]'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
