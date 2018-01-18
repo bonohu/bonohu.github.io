@@ -4,5 +4,5 @@ Category: DBCLS
 
 ## SPARQLthon64
 
-SPARQLthon for Jan 2018 was held at DBCLS Kashiwa.
+[SPARQLthon](http://wiki.lifesciencedb.jp/mw/SPARQLthon) for Jan 2018 was held at DBCLS Kashiwa.
 

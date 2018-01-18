@@ -19,16 +19,13 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
+# Links
 LINKS = (('ImpactStory', 'https://profiles.impactstory.org/u/0000-0003-4413-0651'),
          ('ResearchGate', 'https://www.researchgate.net/profile/Hidemasa_Bono'),
          ('ResearchMap', 'https://researchmap.jp/bonohu/?lang=english'),
          ('PubMed', 'https://www.ncbi.nlm.nih.gov/pubmed?cmd=search&term=Bono%20H[au]%20AND%201995%3A2100[dp]%20NOT%20jpn[la]'),
-         ('You can modify those links in your config file', '#'),)
+         ('Twitter', 'https://twitter.com/drbonohu'),)
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
 
