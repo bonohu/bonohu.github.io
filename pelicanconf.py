@@ -33,4 +33,4 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = "/Users/bono/Documents/etc/pelican-themes/dev-random"
+THEME = "/Users/bono/Documents/etc/pelican-themes/foundation-default-colours"
