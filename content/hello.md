@@ -8,6 +8,7 @@ Hello, world!
 
 Blog in English has just been started.
 The website I referred.
+
 - https://qiita.com/akimach/items/dfcac164ac5669a6378e
 
 Shell commands to update contents below.
