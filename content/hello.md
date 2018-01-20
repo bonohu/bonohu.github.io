@@ -2,11 +2,10 @@ Title: Hello, world!
 Date: 2018-01-16 12:00
 Category: misc
 
-## Test
+## bonohu blog
 
-Hello, world!
+Blog in English by bonohu has just been started using Pelican and github. This blog will focus on technical issues on data handling in life science.
 
-Blog in English has just been started.
 The website I referred.
 
 - [https://qiita.com/akimach/items/dfcac164ac5669a6378e](https://qiita.com/akimach/items/dfcac164ac5669a6378e)

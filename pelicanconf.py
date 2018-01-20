@@ -20,10 +20,11 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Links
-LINKS = (('GitHub', 'https://github.com/bonohu'),
+LINKS = (('PubMed', 'https://www.ncbi.nlm.nih.gov/pubmed?cmd=search&term=Bono%20H[au]%20AND%201995%3A2100[dp]%20NOT%20jpn[la]'),
+         ('Figshare', 'https://figshare.com/authors/Hidemasa_Bono/476712'),
+         ('GitHub', 'https://github.com/bonohu'),
 	 ('GoogleScholar', 'https://scholar.google.co.jp/citations?user=e6OaeXQAAAAJ&hl=en'),
          ('ImpactStory', 'https://profiles.impactstory.org/u/0000-0003-4413-0651'),
-         ('PubMed', 'https://www.ncbi.nlm.nih.gov/pubmed?cmd=search&term=Bono%20H[au]%20AND%201995%3A2100[dp]%20NOT%20jpn[la]'),
          ('ResearchGate', 'https://www.researchgate.net/profile/Hidemasa_Bono'),
          ('ResearchMap', 'https://researchmap.jp/bonohu/?lang=english'),
          ('Twitter', 'https://twitter.com/drbonohu'),)
@@ -35,3 +36,4 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 THEME = "/Users/bono/Documents/etc/pelican-themes/foundation-default-colours"
+GOOGLE_ANALYTICS = 'UA-113297-11'  # Tracking ID
