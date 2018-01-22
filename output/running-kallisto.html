@@ -106,8 +106,8 @@
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
 <article>
-	<h2>running kallisto</h2>
-	<p>If the transcriptome sequence set is available for an organism, <code>kallisto</code> can be used for transcript quantification. The version I used was <code>0.43.1</code>.</p>
+	<h2>Running kallisto</h2>
+	<p>If the transcriptome sequence set is available for an organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
 <div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
 kallisto quant -i index -o results/ -t 4 test_1.fq test_2.fq -b 100
 </pre></div>

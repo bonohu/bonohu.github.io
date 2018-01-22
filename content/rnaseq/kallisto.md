@@ -1,7 +1,7 @@
-Title: running kallisto
+Title: Running kallisto
 Date: 2018-01-22 18:00
 
-If the transcriptome sequence set is available for an organism, `kallisto` can be used for transcript quantification. The version I used was `0.43.1`.
+If the transcriptome sequence set is available for an organism, [kallisto](https://pachterlab.github.io/kallisto/) can be used for transcript quantification. The `kallisto` version I used was `0.43.1`, which was previously installed using Homebrew by the command like `brew install kallisto`.
 
 ```
 kallisto index -i index transcriptome.fa
