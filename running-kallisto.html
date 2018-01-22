@@ -62,7 +62,7 @@
 						<li><label>Categories</label></li>
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
-							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
+							<li class="active"><a href="/category/rnaseq.html">rnaseq</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="https://www.ncbi.nlm.nih.gov/pubmed?cmd=search&term=Bono%20H[au]%20AND%201995%3A2100[dp]%20NOT%20jpn[la]">PubMed</a></li>
@@ -92,7 +92,7 @@
 						<ul class="left">
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
-								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
+								<li class="active"><a href="/category/rnaseq.html">rnaseq</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                                                              
@@ -105,60 +105,22 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-							<div class="row">
-								<div class="small-12 columns">
-									<h2>Archives</h2>
-								</div>
-							</div>
-	<div class="row">
-		<div class="small-10 columns small-centered">
-				<div class="row archive-year">
-					<div class="small-2 columns text-right">
-						<h3>2018</h3>
-					</div>
-				</div>
-					<div class="row archive-entry">
-						<div class="small-2 columns text-right">
-							<h5> 1 22</h5>
-						</div>
-						<div class="small-10 columns">
-							<h5><a href="/running-kallisto.html">running kallisto</a></h5>
-						</div>
-					</div>
-					<div class="row archive-entry">
-						<div class="small-2 columns text-right">
-							<h5> 1 22</h5>
-						</div>
-						<div class="small-10 columns">
-							<h5><a href="/installing-sleuth.html">Installing sleuth</a></h5>
-						</div>
-					</div>
-					<div class="row archive-entry">
-						<div class="small-2 columns text-right">
-							<h5> 1 20</h5>
-						</div>
-						<div class="small-10 columns">
-							<h5><a href="/why-blog-in-english.html">Why blog in English</a></h5>
-						</div>
-					</div>
-					<div class="row archive-entry">
-						<div class="small-2 columns text-right">
-							<h5> 1 18</h5>
-						</div>
-						<div class="small-10 columns">
-							<h5><a href="/sparqlthon64.html">SPARQLthon64</a></h5>
-						</div>
-					</div>
-					<div class="row archive-entry">
-						<div class="small-2 columns text-right">
-							<h5> 1 16</h5>
-						</div>
-						<div class="small-10 columns">
-							<h5><a href="/hello-world.html">Hello, world!</a></h5>
-						</div>
-					</div>
-		</div>
-	</div>
+<article>
+	<h2>running kallisto</h2>
+	<p>If the transcriptome sequence set is available for an organism, <code>kallisto</code> can be used for transcript quantification. The version I used was <code>0.43.1</code>.</p>
+<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
+kallisto quant -i index -o results/ -t 4 test_1.fq test_2.fq -b 100
+</pre></div>
+
+
+<p>This command above is for <strong>paired end</strong> sequence. I first tried bzipped(bzip2) FASTQ files for quant, but it failed. FASTQ files must be uncompressed.</p>
+<p>For <strong>single end</strong>,  <em>fragment length</em> must be specified for runnging kallisto quant.</p>
+<p>IDs for genes (based on IDs in <code>transcriptome.fa</code>) might be different from those by alignment-based RNA-seq (from GFF file). ID conversion should be done locally before the comparison of those.</p>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
