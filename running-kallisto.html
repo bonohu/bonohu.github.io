@@ -122,6 +122,28 @@ kallisto quant -i index -o results/ -t 4 test_1.fq test_2.fq
 
 
 <p>IDs for genes (based on IDs in <code>transcriptome.fa</code>) might be different from those by alignment-based RNA-seq (from GFF file). ID conversion should be done locally before the comparison of those.</p>
+<p>An example for batch script to run kalllisto</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="nv">p</span><span class="o">=</span><span class="m">4</span>
+<span class="nv">ref</span><span class="o">=</span>kallisto_index
+<span class="nv">outdir</span><span class="o">=</span>kallisto_outdir
+<span class="c1"># should be used in the fq containing directory!</span>
+<span class="k">for</span> fq in *.fq.gz<span class="p">;</span>
+ <span class="k">do</span> <span class="nv">g</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">fq</span><span class="p">%_trimmed.fq.gz</span><span class="si">}</span><span class="s2">&quot;</span>
+ <span class="c1"># for single-end reads. &#39;-l&#39; and &#39;-s&#39; should be modified to fit your data</span>
+ <span class="nb">time</span> kallisto quant -i <span class="nv">$ref</span> -o <span class="nv">$outdir</span>/<span class="nv">$g</span> -t <span class="nv">$p</span> --single  -l <span class="m">100</span> -s <span class="m">20</span> <span class="nv">$fq</span> -b <span class="m">100</span>
+<span class="k">done</span>
+</pre></div>
+</td></tr></table>
 	<hr/>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
 </article>
