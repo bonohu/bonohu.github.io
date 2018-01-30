@@ -27,7 +27,7 @@ ref=kallisto_index
 outdir=kallisto_outdir
 # should be used in the fq containing directory!
 for fq in *.fq.gz;
- do g="${fq%_trimmed.fq.gz}"
+ do g="${fq%.fq.gz}"
  # for single-end reads. '-l' and '-s' should be modified to fit your data
  time kallisto quant -i $ref -o $outdir/$g -t $p --single  -l 100 -s 20 $fq -b 100
 done
