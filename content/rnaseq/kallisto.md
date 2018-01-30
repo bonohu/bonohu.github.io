@@ -18,7 +18,7 @@ kallisto quant -i index -o results/ -t 4 --single  -l 100 -s 20 test.fq
 
 IDs for genes (based on IDs in `transcriptome.fa`) might be different from those by alignment-based RNA-seq (from GFF file). ID conversion should be done locally before the comparison of those.
 
-An example for batch script to run kalllisto
+An example for batch script to run kalllisto for gzipped-FASTQ files in current directory(single-end read) with bootstrap 100 times (`-b 100`).
 
 ```
 #!/bin/sh
