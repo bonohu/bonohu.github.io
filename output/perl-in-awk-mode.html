@@ -63,7 +63,7 @@
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
 							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-							<li ><a href="/category/shell.html">shell</a></li>
+							<li class="active"><a href="/category/shell.html">shell</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="http://dbcls.jp/%7Ebono/">Dr.Bono's website</a></li>
@@ -96,7 +96,7 @@
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
 								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-								<li ><a href="/category/shell.html">shell</a></li>
+								<li class="active"><a href="/category/shell.html">shell</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                                                              
@@ -109,10 +109,19 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-    <h1>Authors on bonohu blog</h1>
+<article>
+	<h2>Perl in awk mode</h2>
+	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
+<div class="highlight"><pre><span></span>perl -anle  &#39;print &quot;$F[0]\t$F[3]&quot; if ($F[3] &gt; 0)&#39;
+</pre></div>
 
-    <ul>        <li><a href="/author/bonohu.html">bonohu</a> (6)</li>
-    </ul>
+
+<p>This oneliner means that split column by tab and extract the 1st and 4th column when value of the 4th column is more than 0. I often forget the option <code>-anle</code>.   </p>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 月 05 2月 2018.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
