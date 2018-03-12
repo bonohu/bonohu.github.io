@@ -11,9 +11,9 @@ Shell script to run that script is something like this.
 ```
 #!/bin/sh
 thre=4
-transcript=hoge.fa
-left=hoge_1.fq
-right=hoge_2.fq
+transcript=IACV01.1.fsa_nt.gz
+left=DRR118520_1_val_1.fq.gz
+right=DRR118520_2_val_2.fq.gz
 # parameters to run above
 time /usr/local/Cellar/trinity/2.5.1/util/align_and_estimate_abundance.pl \
 --thread_count $thre \
@@ -23,7 +23,7 @@ time /usr/local/Cellar/trinity/2.5.1/util/align_and_estimate_abundance.pl \
 --right $right \
 --est_method kallisto \
 --kallisto_add_opts "-t $thre" \
---prep_reference --output_dir hoge_kallisto
+--prep_reference --output_dir kallisto_out
 ```
 
 This command above is for **paired end** sequence.
