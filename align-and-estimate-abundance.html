@@ -130,9 +130,9 @@
 14
 15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="nv">thre</span><span class="o">=</span><span class="m">4</span>
-<span class="nv">transcript</span><span class="o">=</span>hoge.fa
-<span class="nv">left</span><span class="o">=</span>hoge_1.fq
-<span class="nv">right</span><span class="o">=</span>hoge_2.fq
+<span class="nv">transcript</span><span class="o">=</span>IACV01.1.fsa_nt.gz
+<span class="nv">left</span><span class="o">=</span>DRR118520_1_val_1.fq.gz
+<span class="nv">right</span><span class="o">=</span>DRR118520_2_val_2.fq.gz
 <span class="c1"># parameters to run above</span>
 <span class="nb">time</span> /usr/local/Cellar/trinity/2.5.1/util/align_and_estimate_abundance.pl <span class="se">\</span>
 --thread_count <span class="nv">$thre</span> <span class="se">\</span>
@@ -142,7 +142,7 @@
 --right <span class="nv">$right</span> <span class="se">\</span>
 --est_method kallisto <span class="se">\</span>
 --kallisto_add_opts <span class="s2">&quot;-t </span><span class="nv">$thre</span><span class="s2">&quot;</span> <span class="se">\</span>
---prep_reference --output_dir hoge_kallisto
+--prep_reference --output_dir kallisto_out
 </pre></div>
 </td></tr></table>
 
