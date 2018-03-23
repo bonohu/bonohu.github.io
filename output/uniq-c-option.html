@@ -131,9 +131,15 @@
 </td></tr></table>
 
 <p>Run this script with shell command like below.</p>
-<p><code>cat hoge.txt | perl count.pl |sort -rn</code></p>
+<div class="highlight"><pre><span></span>cat hoge.txt | perl count.pl |sort -rn
+</pre></div>
+
+
 <p>This operation can be relaced with simple shell command like this.</p>
-<p><code>uniq -c hoge.txt | sort -rn</code></p>
+<div class="highlight"><pre><span></span>uniq -c hoge.txt | sort -rn
+</pre></div>
+
+
 <p><code>uniq</code> has been very familiar command, but I have not realized the option <code>-c</code>. 
 The UNIX world is very deep indeed!</p>
 	<hr/>

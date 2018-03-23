@@ -17,11 +17,15 @@ foreach (sort keys %num) {
 
 Run this script with shell command like below.
 
-```cat hoge.txt | perl count.pl |sort -rn```
+```
+cat hoge.txt | perl count.pl |sort -rn
+```
 
 This operation can be relaced with simple shell command like this.
 
-```uniq -c hoge.txt | sort -rn```
+```
+uniq -c hoge.txt | sort -rn
+```
 
 `uniq` has been very familiar command, but I have not realized the option `-c`. 
 The UNIX world is very deep indeed!
