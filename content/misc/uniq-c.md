@@ -15,16 +15,19 @@ foreach (sort keys %num) {
 }
 ```
 
-Run this script with shell command like below.
+In order to count the number of redundancy in the list, I often run this script with shell command like below.
 
 ```
-cat hoge.txt | perl count.pl |sort -rn
+cat hoge.txt \
+| perl count.pl \
+| sort -rn
 ```
 
-This operation can be relaced with simple shell command like this.
+This operation can be relaced with a simple shell command like below.
 
 ```
-uniq -c hoge.txt | sort -rn
+uniq -c hoge.txt \
+| sort -rn
 ```
 
 `uniq` has been very familiar command, but I have not realized the option `-c`. 
