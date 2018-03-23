@@ -130,13 +130,16 @@
 </pre></div>
 </td></tr></table>
 
-<p>Run this script with shell command like below.</p>
-<div class="highlight"><pre><span></span>cat hoge.txt | perl count.pl |sort -rn
+<p>In order to count the number of redundancy in the list, I often run this script with shell command like below.</p>
+<div class="highlight"><pre><span></span>cat hoge.txt \
+| perl count.pl \
+| sort -rn
 </pre></div>
 
 
-<p>This operation can be relaced with simple shell command like this.</p>
-<div class="highlight"><pre><span></span>uniq -c hoge.txt | sort -rn
+<p>This operation can be relaced with a simple shell command like below.</p>
+<div class="highlight"><pre><span></span>uniq -c hoge.txt \
+| sort -rn
 </pre></div>
 
 
