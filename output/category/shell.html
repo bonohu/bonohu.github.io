@@ -116,6 +116,27 @@
 							</div>
 
 <article>
+	<h3><a href="/uniq-c-option.html">uniq -c option</a></h3>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 金 23 3月 2018.</h6>
+	<p>When I want to count the number of redundant words in a file (<code>hoge.txt</code>), I have used simple Perl code like this(<code>count.pl</code>).</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/perl</span>
+<span class="k">while</span><span class="p">(</span><span class="o">&lt;&gt;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">my</span><span class="p">(</span><span class="nv">$word</span><span class="p">)</span> <span class="o">=</span> <span class="nb">split</span><span class="p">;</span>
+        <span class="nv">$num</span><span class="p">{</span><span class="nv">$word</span><span class="p">}</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nb">sort</span> <span class="nb">keys</span> <span class="nv">%num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">print</span> <span class="s">&quot;$_\t$num …</span></pre></div></td></tr></table>
+		<p class="continue"><a href="/uniq-c-option.html">Continue reading &raquo;</a></p>
+</article>
+<hr />
+<article>
 	<h3><a href="/perl-in-awk-mode.html">Perl in awk mode</a></h3>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 月 05 2月 2018.</h6>
 	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
