@@ -111,6 +111,27 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
+	<h3><a href="/uniq-c-option.html">uniq -c option</a></h3>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 金 23 3月 2018.</h6>
+	<p>When I want to count the number of redundant words in a file (<code>hoge.txt</code>), I have used simple Perl code like this(<code>count.pl</code>).</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/perl</span>
+<span class="k">while</span><span class="p">(</span><span class="o">&lt;&gt;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">my</span><span class="p">(</span><span class="nv">$word</span><span class="p">)</span> <span class="o">=</span> <span class="nb">split</span><span class="p">;</span>
+        <span class="nv">$num</span><span class="p">{</span><span class="nv">$word</span><span class="p">}</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nb">sort</span> <span class="nb">keys</span> <span class="nv">%num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">print</span> <span class="s">&quot;$_\t$num …</span></pre></div></td></tr></table>
+		<p class="continue"><a href="/uniq-c-option.html">Continue reading &raquo;</a></p>
+</article>
+<hr />
+<article>
 	<h3><a href="/align-and-estimate-abundance.html">Align and estimate abundance</a></h3>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 水 07 3月 2018.</h6>
 	<p>If assembled transcriptome sequence set and RNA-seq reads for that are available for an organism, we can align reads and estimate transcript abundance by running the script (<code>align_and_estimate_abundance.pl</code>) in the Trinity software package. When the Trinity package was installed using Homebrew, that script is installed in <code>/usr/local/Cellar …</code></p>
@@ -193,22 +214,19 @@ Thanks to this API, we …</p>
 		<p class="continue"><a href="/sparqlthon64.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
-<article>
-	<h3><a href="/hello-world.html">Hello, world!</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 火 16 1月 2018.</h6>
-	<h2>bonohu blog</h2>
-<p>Blog in English by bonohu has just been started using Pelican and github. This blog will focus on technical issues on data handling in life science.</p>
-<p>The website I referred.</p>
-<ul>
-<li><a href="https://qiita.com/akimach/items/dfcac164ac5669a6378e">https://qiita.com/akimach/items/dfcac164ac5669a6378e</a></li>
-</ul>
-<p>Shell commands to update contents below.</p>
-<div class="highlight"><pre><span></span><span class="c1"># switched to pelican branch,</span>
-<span class="n">git</span> <span class="n">checkout …</span></pre></div>
-		<p class="continue"><a href="/hello-world.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
 
+<div class="row" style="margin-bottom: -1.25em;">
+	<div class="small-12 columns text-center">
+		<div class="pagination-centered">
+			<ul class="pagination">
+				<li class="arrow unavailable"><a href="#">&larr; Previous</a></li>
+				<li class="current"><a href="/author/bonohu.html">1</a></li>
+				<li class=""><a href="/author/bonohu2.html">2</a></li>
+				<li class="arrow"><a href="/author/bonohu2.html">Next &rarr;</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
 
 						</div>
 						<!-- End Main Content -->

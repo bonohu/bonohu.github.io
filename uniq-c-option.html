@@ -63,7 +63,7 @@
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
 							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-							<li ><a href="/category/shell.html">shell</a></li>
+							<li class="active"><a href="/category/shell.html">shell</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="http://dbcls.jp/%7Ebono/">Dr.Bono's website</a></li>
@@ -96,7 +96,7 @@
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
 								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-								<li ><a href="/category/shell.html">shell</a></li>
+								<li class="active"><a href="/category/shell.html">shell</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                                                              
@@ -109,10 +109,37 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-    <h1>Authors on bonohu blog</h1>
+<article>
+	<h2>uniq -c option</h2>
+	<p>When I want to count the number of redundant words in a file (<code>hoge.txt</code>), I have used simple Perl code like this(<code>count.pl</code>).</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/perl</span>
+<span class="k">while</span><span class="p">(</span><span class="o">&lt;&gt;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">my</span><span class="p">(</span><span class="nv">$word</span><span class="p">)</span> <span class="o">=</span> <span class="nb">split</span><span class="p">;</span>
+        <span class="nv">$num</span><span class="p">{</span><span class="nv">$word</span><span class="p">}</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nb">sort</span> <span class="nb">keys</span> <span class="nv">%num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">print</span> <span class="s">&quot;$_\t$num{$_}\n&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
 
-    <ul>        <li><a href="/author/bonohu.html">bonohu</a> (11)</li>
-    </ul>
+<p>Run this script with shell command like below.
+<code>cat hoge.txt | perl count.pl |sort -rn</code></p>
+<p>This calculation can be relaced with simple shell command like this.
+<code>uniq -c hoge.txt | sort -rn</code></p>
+<p><code>uniq</code> has been very familiar command, but I have not realized the option <code>-c</code>.</p>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 金 23 3月 2018.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
