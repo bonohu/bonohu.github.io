@@ -1,5 +1,5 @@
 Title: Retrieve a subset of sequence dataset
-Date: 2018-03-23 15:00
+Date: 2018-03-24 15:00
 Category: shell
 
 In order to extract a set of sequence from FASTA-formatted file (both in nucleotides and peptides), several commands can be used to do so.
