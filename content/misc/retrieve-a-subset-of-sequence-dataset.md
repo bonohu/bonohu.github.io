@@ -10,6 +10,6 @@ makeblastdb -in hoge.fa -dbtype prot -hash_index -parse_seqids
 blastdbcmd -db hoge.fa -entry_batch idlist.txt
 ```
 
-In this example, `hoge.fa` is a large file containing sequences in FASTA format and `idlist.txt` contains the list of IDs.
+In this example, `hoge.fa` is a large file containing sequences in FASTA format. `idlist.txt` contains the list of IDs, where only ID of sequence is described in a line (in other words, '\\N' is a delimiter of data).
 
 This is for FASTA file in peptides. If the file in nucleotides, user must change `-dbtype prot` option to `-dbtype nucl`.
