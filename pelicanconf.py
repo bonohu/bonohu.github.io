@@ -21,7 +21,7 @@ AUTHOR_FEED_RSS = None
 
 # Links
 LINKS = (('Dr.Bono\'s website', 'http://dbcls.jp/%7Ebono/'),
-	 ('Europe PMC', 'https://europepmc.org/search?query=AUTHORID:\"0000-0003-4413-0651\"'),
+	 ('Europe PMC', 'https://europepmc.org/search?query=AUTHORID:0000-0003-4413-0651'),
          ('GitHub', 'https://github.com/bonohu'),
          ('ORCID', 'http://orcid.org/0000-0003-4413-0651'),
          ('PubMed', 'https://www.ncbi.nlm.nih.gov/pubmed?cmd=search&term=Bono%20H[au]%20AND%201995%3A2100[dp]%20NOT%20jpn[la]'),
