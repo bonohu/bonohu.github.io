@@ -2,7 +2,7 @@ Title: Join files by key
 Date: 2018-03-25 16:00
 Category: shell
 
-Join two files by key in the first column of files.
+Joining two files by key in the first column of files can be easily done by using UNIX command below.
 
 ```
 join -j 1 file1.txt file2.txt
