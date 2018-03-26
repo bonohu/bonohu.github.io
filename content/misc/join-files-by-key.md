@@ -15,10 +15,12 @@ In order to get the output by tab-delimited, following option for `join` is effe
 join -j 1 -t "$(printf '\011')" file1.txt file2.txt
 ```
 
-Two files must be sorted and non-redundant before this operation.
+Two files must be sorted and non-redundant before running `join` command.
+`sort` command with `-u` (unique) option should be applied.
 
 ```
 sort -u file1.txt > file1s.txt
 mv file1s.txt file1.txt
 ```
+
 
