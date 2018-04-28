@@ -6,4 +6,4 @@ Joined [SPARQLthon](http://wiki.lifesciencedb.jp/mw/SPARQLthon) held at DBCLS Ka
 
 Discussed the development of two search systems (DBCLS SRA and AOE) and the integration of these. The specification will be fixed after the coming INSDC meeting of this year at NCBI.
 
-I try to add contents to **how to make data for AOE**.
+I tried to add contents to **how to make data for AOE**, planned to archive to BioRxiv.
