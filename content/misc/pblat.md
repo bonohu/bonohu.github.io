@@ -1,8 +1,6 @@
-Title: parallelized blat
+Title: parallelized BLAT
 Date: 2018-05-01 17:00
 Category: misc
-
-## BLAT with multi-threads support
 
 As I had to map assembled reads to the genomic sequence, I used BLAT (the BLAST-like Alignment Tool) for that purpose. BLAT was so fast for landing reads to genomic sequence, but it can be slow if reads are so many. I thought it would be so nice to have multi-threaded BLAT.
 
