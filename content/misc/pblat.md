@@ -10,6 +10,10 @@ And, [there is](https://github.com/icebert/pblat)! Just `git clone https://githu
 time pblat -threads=4 refgenome.fa query.fa output.psl
 ```
 
-`-threads=N` is only the difference from original BLAT command where N is the number of threads. 
+`-threads=N` is only the difference from original BLAT command where N is the number of threads.
 
+An example execution time for execution with N=12 was below.
+
+> 26353.36s user 88.99s system 798% cpu 55:10.32 total
+ 
 The license to use this code is same as that of BLAT. Commercial users should take care of this.
