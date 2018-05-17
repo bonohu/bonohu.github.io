@@ -130,7 +130,7 @@
 <span class="nv">x</span><span class="o">=</span>hoge
 <span class="nv">base</span><span class="o">=</span><span class="nv">$1</span>
 <span class="nv">p</span><span class="o">=</span><span class="m">4</span>
-hisat2 -p <span class="nv">$p</span> -x <span class="nv">$x</span> --dta -1 <span class="si">${</span><span class="nv">base</span><span class="si">}</span>_1.fq -2 <span class="si">${</span><span class="nv">base</span><span class="si">}</span>_2.fq <span class="se">\</span>
+hisat2 -p <span class="nv">$p</span> -x <span class="nv">$x</span> --dta -1 <span class="si">${</span><span class="nv">base</span><span class="si">}</span>_1.fq.gz -2 <span class="si">${</span><span class="nv">base</span><span class="si">}</span>_2.fq.gz <span class="se">\</span>
 <span class="p">|</span> samtools view -@ <span class="nv">$p</span> -bS - <span class="se">\</span>
 <span class="p">|</span> samtools sort -@ <span class="nv">$p</span> -T /tmp/hoge<span class="nv">$$</span> -o <span class="si">${</span><span class="nv">base</span><span class="si">}</span>.bam -
 </pre></div>
@@ -140,6 +140,9 @@ hisat2 -p <span class="nv">$p</span> -x <span class="nv">$x</span> --dta -1 <spa
 <p>Command to run the script is below.</p>
 <div class="highlight"><pre><span></span>time sh hisat2.sh sample
 </pre></div>
+
+
+<p>In this example, (gzipped) FASTQ files for paired-end reads are <code>sample_1.fq.gz</code> and <code>sample_2.fq.gz</code>.</p>
 	<hr/>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 木 17 5月 2018.</h6>
 </article>
