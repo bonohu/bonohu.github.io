@@ -112,7 +112,7 @@
 						<div class="medium-9 small-12 columns" role="content">
 <article>
 	<h2>HISAT2</h2>
-	<p>HISAT2 is successor of TopHat2. Execution of HISAT2 itself does not require genome annotation file (GTF).</p>
+	<p>HISAT2 is a successor of TopHat2. Execution of HISAT2 itself does not require genome annotation file (GTF).</p>
 <p>First of all, index for HISAT2 should be constructed unless pre-calculated indexes are available (indexes for popular genomes are pre-calculated and can be downloaded from <a href="https://ccb.jhu.edu/software/hisat2/index.shtml">HISAT2 website</a> ). When the FASTA-formatted genome is <code>hogenome.fa</code> and the name of that index is <code>hoge</code>, command to build the index is below.</p>
 <div class="highlight"><pre><span></span>hisat2-build -p 4 hogenome.fa hoge
 </pre></div>
@@ -143,6 +143,7 @@ hisat2 -p <span class="nv">$p</span> -x <span class="nv">$x</span> --dta -1 <spa
 
 
 <p>In this example, (gzipped) FASTQ files for paired-end reads are <code>sample_1.fq.gz</code> and <code>sample_2.fq.gz</code>.</p>
+<p>It takes sometime to run <code>hisat2</code>, but the execution time for HISAT2 is much shorter than that for TopHat2.</p>
 	<hr/>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 木 17 5月 2018.</h6>
 </article>
