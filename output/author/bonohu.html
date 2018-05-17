@@ -112,6 +112,14 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
+	<h3><a href="/hisat2.html">HISAT2</a></h3>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 木 17 5月 2018.</h6>
+	<p>HISAT2 is successor of TopHat2. Execution of HISAT2 itself does not require genome annotation file (GTF).</p>
+<p>First of all, index for HISAT2 should be constructed unless pre-calculated indexes are available (indexes for popular genomes are pre-calculated and can be downloaded from <a href="https://ccb.jhu.edu/software/hisat2/index.shtml">HISAT2 website</a> ). When the FASTA-formatted genome is <code>hogenome.fa …</code></p>
+		<p class="continue"><a href="/hisat2.html">Continue reading &raquo;</a></p>
+</article>
+<hr />
+<article>
 	<h3><a href="/parallelized-blat.html">parallelized BLAT</a></h3>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 火 01 5月 2018.</h6>
 	<p>As I had to map assembled reads to the genomic sequence, I used BLAT (the BLAST-like Alignment Tool) for that purpose. BLAT was so fast for landing reads to genomic sequence, but it can be slow if reads are so many. I thought it would be so nice to have …</p>
@@ -204,14 +212,6 @@ In recent years, I regularly use <code>blastdbcmd</code> in NCBI BLAST suite. To
 </blockquote>
 <p>This article was included in <a href="https://www.nature.com/collections/fantom5">FANTOM5 collection</a>. It was a great pleasure to be published together with FANTOM5 data …</p>
 		<p class="continue"><a href="/increasing-the-usability-of-fantom5-data.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/perl-in-awk-mode.html">Perl in awk mode</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 月 05 2月 2018.</h6>
-	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
-<div class="highlight"><pre><span></span>perl -anle  &#39;print &quot;$F[0]\t$F[3]&quot; if ($F …</pre></div>
-		<p class="continue"><a href="/perl-in-awk-mode.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
 
