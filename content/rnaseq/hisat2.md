@@ -1,7 +1,7 @@
 Title: HISAT2
 Date: 2018-05-17 18:00
 
-HISAT2 is successor of TopHat2. Execution of HISAT2 itself does not require genome annotation file (GTF).
+HISAT2 is a successor of TopHat2. Execution of HISAT2 itself does not require genome annotation file (GTF).
 
 First of all, index for HISAT2 should be constructed unless pre-calculated indexes are available (indexes for popular genomes are pre-calculated and can be downloaded from [HISAT2 website](https://ccb.jhu.edu/software/hisat2/index.shtml) ). When the FASTA-formatted genome is `hogenome.fa` and the name of that index is `hoge`, command to build the index is below.
 
@@ -32,3 +32,5 @@ time sh hisat2.sh sample
 ```
 
 In this example, (gzipped) FASTQ files for paired-end reads are `sample_1.fq.gz` and `sample_2.fq.gz`.
+
+It takes sometime to run `hisat2`, but the execution time for HISAT2 is much shorter than that for TopHat2.
