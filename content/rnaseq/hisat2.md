@@ -18,7 +18,7 @@ One example for shell script to run `hisat2`, named `hisat2.sh`, is like this.
 x=hoge
 base=$1
 p=4
-hisat2 -p $p -x $x --dta -1 ${base}_1.fq -2 ${base}_2.fq \
+hisat2 -p $p -x $x --dta -1 ${base}_1.fq.gz -2 ${base}_2.fq.gz \
 | samtools view -@ $p -bS - \
 | samtools sort -@ $p -T /tmp/hoge$$ -o ${base}.bam -
 ```
@@ -30,3 +30,5 @@ Command to run the script is below.
 ```
 time sh hisat2.sh sample
 ```
+
+In this example, (gzipped) FASTQ files for paired-end reads are `sample_1.fq.gz` and `sample_2.fq.gz`.
