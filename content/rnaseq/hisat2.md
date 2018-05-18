@@ -1,7 +1,11 @@
 Title: HISAT2
 Date: 2018-05-17 18:00
 
-HISAT2 is a successor of TopHat2. Execution of HISAT2 itself does not require genome annotation file (GTF).
+HISAT2 is a successor of [TopHat](https://ccb.jhu.edu/software/tophat/index.shtml).
+
+> TopHat has entered a low maintenance, low support stage as it is now largely superseded by HISAT2 which provides the same core functionality (i.e. spliced alignment of RNA-Seq reads), in a more accurate and much more efficient way.
+
+Execution of HISAT2 itself does not require genome annotation file (GTF).
 
 First of all, index for HISAT2 should be constructed unless pre-calculated indexes are available (indexes for popular genomes are pre-calculated and can be downloaded from [HISAT2 website](https://ccb.jhu.edu/software/hisat2/index.shtml) ). When the FASTA-formatted genome is `hogenome.fa` and the name of that index is `hoge`, command to build the index is below.
 
