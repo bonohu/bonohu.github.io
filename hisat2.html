@@ -116,7 +116,7 @@
 <blockquote>
 <p>TopHat has entered a low maintenance, low support stage as it is now largely superseded by HISAT2 which provides the same core functionality (i.e. spliced alignment of RNA-Seq reads), in a more accurate and much more efficient way.</p>
 </blockquote>
-<p>Execution of HISAT2 itself does not require genome annotation file (GTF).</p>
+<p>Genome annotation file (GTF) is not requred in the execution of HISAT2 itself.</p>
 <p>First of all, index for HISAT2 should be constructed unless pre-calculated indexes are available (indexes for popular genomes are pre-calculated and can be downloaded from <a href="https://ccb.jhu.edu/software/hisat2/index.shtml">HISAT2 website</a> ). When the FASTA-formatted genome is <code>hogenome.fa</code> and the name of that index is <code>hoge</code>, command to build the index is below.</p>
 <div class="highlight"><pre><span></span>hisat2-build -p 4 hogenome.fa hoge
 </pre></div>
