@@ -9,3 +9,5 @@ Updated version of [AOE](http://aoe.dbcls.jp/), which use [Apache Solr](http://l
 In addition, we discussed the development of DBCLS SRA and AOE this fiscal year so that the specification was fixed after the INSDC meeting at NCBI held this month.
 
 Direct acquisition of original GEO data is planned to enrich meta-data in AOE, but not yet implemented as some coding for that acquisition is needed.
+
+Documentation for AOE was updated for the latest version.
