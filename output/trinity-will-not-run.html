@@ -114,18 +114,17 @@
 	<h2>Trinity will not run</h2>
 	<p>After some software updates, Trinity ended with error below.</p>
 <blockquote>
-<blockquote>
-<blockquote>
 <p>dyld: Library not loaded: /usr/local/opt/gcc/lib/gcc/7/libgomp.1.dylib                                  <br>
 Referenced from: /usr/local/Cellar/trinity/2.5.1/util/..//Inchworm/bin/fastaToKmerCoverageStats
 Reason: image not found</p>
-</blockquote>
-</blockquote>
 </blockquote>
 <p>I checked the file <code>/usr/local/opt/gcc/lib/gcc/7/libgomp.1.dylib</code>, and found that there was no directory termed <code>7</code> in <code>/usr/local/opt/gcc/lib/gcc/</code>, only the directory termed <code>8</code>. And there was <code>libgomp.1.dylib</code> in old version of gcc library, thus I made a sim-link to that.</p>
 <div class="highlight"><pre><span></span><span class="c">% cd /usr/local/opt/gcc/lib/gcc/</span>
 <span class="c">% ln -s ../../../7.3.0_1/lib/gcc/7 .</span>
 </pre></div>
+
+
+<p>It is okay now, but I also found that Trinity version 2.5.1 is not the latest one as of June 2018 (the latest version is 2.6.6). I should try newer version of Trinity! </p>
 	<hr/>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 水 06 6月 2018.</h6>
 </article>
