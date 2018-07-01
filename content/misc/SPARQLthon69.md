@@ -6,4 +6,4 @@ Joined [SPARQLthon](http://wiki.lifesciencedb.jp/mw/SPARQLthon) held at DBCLS Ka
 
 We discussed a development of DBCLS SRA and AOE for this fiscal year.
 
-How to get GEO metadata from NCBI was examined for sustainable retrieval system for AOE. 
+How to get GEO metadata from NCBI was examined for sustainable retrieval system for AOE.
