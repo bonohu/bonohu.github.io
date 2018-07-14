@@ -110,85 +110,44 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-							<div class="row">
-								<div class="small-12 columns">
-									<h2>Category: shell</h2>
-								</div>
-							</div>
-
 <article>
-	<h3><a href="/moving-to-cleanly-installed-high-sierra.html">Moving to cleanly installed High Sierra</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 木 12 7月 2018.</h6>
+	<h2>Moving to cleanly installed High Sierra</h2>
 	<p>As there was a mechanical trouble in my main machine, MacBookPro, I am moving to new MacBookPro with cleanly installed High Sierra (10.13.6). Below is a log for my future replication...</p>
 <p>First of all, default shell was changed with <code>chsh</code> command to <code>/bin/zsh</code>.</p>
-<p>After installing Homebrew, <code>coreutils …</code></p>
-		<p class="continue"><a href="/moving-to-cleanly-installed-high-sierra.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/join-command-option-for-generating-tab-delimited-file.html">join command option for generating tab-delimited file</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 金 15 6月 2018.</h6>
-	<p>When we want to join two files by a same key into one file, we can use <code>join</code> command. We can join lines by a first column value of tab-delimited files.</p>
-<div class="highlight"><pre><span></span>join -j 1 file1 file2
+<p>After installing Homebrew, <code>coreutils</code> was firstly introduced.</p>
+<div class="highlight"><pre><span></span>brew install -v coreutils
 </pre></div>
 
 
-<p>Indeed, <code>join</code> command itself is very useful, default output is not tab-delimited text, but …</p>
-		<p class="continue"><a href="/join-command-option-for-generating-tab-delimited-file.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/join-files-by-key.html">Join files by key</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 日 25 3月 2018.</h6>
-	<p>Joining two files by key in the first column of files can be easily done by using UNIX command below.</p>
-<div class="highlight"><pre><span></span>join -j 1 file1.txt file2.txt
+<p><code>PATH</code> was changed  to use commands instroduced.</p>
+<div class="highlight"><pre><span></span>export PATH=&quot;/usr/local/opt/coreutils/libexec/gnubin:$PATH&quot;
+export MANPATH=&quot;/usr/local/opt/coreutils/libexec/gnuman:$MANPATH&quot;
 </pre></div>
 
 
-<p>This is very useful command, but the output is space-delimited by default.
-In order to get the output by tab-delimited, following option for …</p>
-		<p class="continue"><a href="/join-files-by-key.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/retrieve-a-subset-of-sequence-dataset.html">Retrieve a subset of sequence dataset</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 土 24 3月 2018.</h6>
-	<p>In order to extract a set of sequence from FASTA-formatted file (both in nucleotides and peptides), several commands can be used to do so.
-In recent years, I regularly use <code>blastdbcmd</code> in NCBI BLAST suite. To run this command, the file must be indexed by <code>makeblastdb</code> with the option below …</p>
-		<p class="continue"><a href="/retrieve-a-subset-of-sequence-dataset.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/uniq-c-option.html">uniq -c option</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 金 23 3月 2018.</h6>
-	<p>When I want to count the number of redundant words in a file (<code>hoge.txt</code>), I have used simple Perl code like this(<code>count.pl</code>).</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/perl</span>
-<span class="k">while</span><span class="p">(</span><span class="o">&lt;&gt;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">my</span><span class="p">(</span><span class="nv">$word</span><span class="p">)</span> <span class="o">=</span> <span class="nb">split</span><span class="p">;</span>
-        <span class="nv">$num</span><span class="p">{</span><span class="nv">$word</span><span class="p">}</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">foreach</span> <span class="p">(</span><span class="nb">sort</span> <span class="nb">keys</span> <span class="nv">%num</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">print</span> <span class="s">&quot;$_\t$num …</span></pre></div></td></tr></table>
-		<p class="continue"><a href="/uniq-c-option.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/perl-in-awk-mode.html">Perl in awk mode</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 月 05 2月 2018.</h6>
-	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
-<div class="highlight"><pre><span></span>perl -anle  &#39;print &quot;$F[0]\t$F[3]&quot; if ($F …</pre></div>
-		<p class="continue"><a href="/perl-in-awk-mode.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
+<p>Several tools were introduced with brew commands below.</p>
+<div class="highlight"><pre><span></span>brew install -v gnu-tar —with-default-names
+brew install -v grep —with-default-names
+brew install -v findutils —with-default-names
+brew install -v rsync
+brew install -v pigz
+brew install -v less
+brew install -v pbzip2
+brew install -v byobu
+</pre></div>
 
 
+<p>Before using <code>pip</code> with <code>python</code>, Anaconda(miniconda) was introduced to separately install them.</p>
+<p>In order to use <code>csvlook</code>, <code>csvkit</code> was installed via <code>pip</code>.</p>
+<div class="highlight"><pre><span></span>pip install csvkit
+pip install pelican Markdown
+pip install ghp-import
+</pre></div>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 木 12 7月 2018.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
