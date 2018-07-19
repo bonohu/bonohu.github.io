@@ -115,7 +115,7 @@
 	<p>As there was a mechanical trouble in my main machine, MacBookPro, I am moving to new MacBookPro with cleanly installed High Sierra (10.13.6). Below is a log for my future replication...</p>
 <p>First of all, default shell was changed with <code>chsh</code> command to <code>/bin/zsh</code>.</p>
 <p>After installing Homebrew, <code>coreutils</code> was firstly introduced.</p>
-<div class="highlight"><pre><span></span>brew install -v coreutils
+<div class="highlight"><pre><span></span><span class="c">% brew install -v coreutils</span>
 </pre></div>
 
 
@@ -126,22 +126,23 @@ export MANPATH=&quot;/usr/local/opt/coreutils/libexec/gnuman:$MANPATH&quot;
 
 
 <p>Several tools were introduced with brew commands below.</p>
-<div class="highlight"><pre><span></span>brew install -v gnu-tar —with-default-names
-brew install -v grep —with-default-names
-brew install -v findutils —with-default-names
-brew install -v rsync
-brew install -v pigz
-brew install -v less
-brew install -v pbzip2
-brew install -v byobu
+<div class="highlight"><pre><span></span><span class="c">% brew install -v gnu-tar â€”with-default-names</span>
+<span class="c">% brew install -v grep â€”with-default-names</span>
+<span class="c">% brew install -v findutils â€”with-default-names</span>
+<span class="c">% brew install -v rsync</span>
+<span class="c">% brew install -v pigz</span>
+<span class="c">% brew install -v less</span>
+<span class="c">% brew install -v pbzip2</span>
+<span class="c">% brew install -v byobu</span>
+<span class="c">% brew install -v lftp</span>
 </pre></div>
 
 
 <p>Before using <code>pip</code> with <code>python</code>, Anaconda(miniconda) was introduced to separately install them.</p>
 <p>In order to use <code>csvlook</code>, <code>csvkit</code> was installed via <code>pip</code>.</p>
-<div class="highlight"><pre><span></span>pip install csvkit
-pip install pelican Markdown
-pip install ghp-import
+<div class="highlight"><pre><span></span><span class="c">% pip install csvkit</span>
+<span class="c">% pip install pelican Markdown</span>
+<span class="c">% pip install ghp-import</span>
 </pre></div>
 	<hr/>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 木 12 7月 2018.</h6>
