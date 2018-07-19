@@ -113,20 +113,20 @@
 <article>
 	<h2>Running kallisto</h2>
 	<p>If a transcriptome sequence set is available for the organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
-<div class="highlight"><pre><span></span><span class="c">% kallisto index -i index transcriptome.fa</span>
-<span class="c">% kallisto quant -i index -o results/ -t 4 test_1.fq test_2.fq</span>
+<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
+kallisto quant -i index -o results/ -t 4 test_1.fq test_2.fq
 </pre></div>
 
 
 <p>This command above is for <strong>paired end</strong> sequence. </p>
 <p>The command can accept gzipped FASTA file for indexing.</p>
-<div class="highlight"><pre><span></span><span class="c">% kallisto index -i index transcriptome.fa.gz</span>
+<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa.gz
 </pre></div>
 
 
 <p>I first tried bzipped(bzip2) FASTQ files for quant, but it failed. FASTQ files must be uncompressed.</p>
 <p>For <strong>single end</strong>,  <em>fragment length</em> must be specified by <code>-l</code> option for runnging kallisto quant.</p>
-<div class="highlight"><pre><span></span><span class="c">% kallisto quant -i index -o results/ -t 4 --single  -l 100 -s 20 test.fq </span>
+<div class="highlight"><pre><span></span>kallisto quant -i index -o results/ -t 4 --single  -l 100 -s 20 test.fq 
 </pre></div>
 
 
