@@ -9,7 +9,7 @@ First of all, default shell was changed with `chsh` command to `/bin/zsh`.
 After installing Homebrew, `coreutils` was firstly introduced.
 
 ```
-brew install -v coreutils
+% brew install -v coreutils
 ```
 
 `PATH` was changed  to use commands instroduced.
@@ -22,14 +22,15 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 Several tools were introduced with brew commands below.
 
 ```
-brew install -v gnu-tar —with-default-names
-brew install -v grep —with-default-names
-brew install -v findutils —with-default-names
-brew install -v rsync
-brew install -v pigz
-brew install -v less
-brew install -v pbzip2
-brew install -v byobu
+% brew install -v gnu-tar â€”with-default-names
+% brew install -v grep â€”with-default-names
+% brew install -v findutils â€”with-default-names
+% brew install -v rsync
+% brew install -v pigz
+% brew install -v less
+% brew install -v pbzip2
+% brew install -v byobu
+% brew install -v lftp
 ```
 
 Before using `pip` with `python`, Anaconda(miniconda) was introduced to separately install them.
@@ -37,7 +38,8 @@ Before using `pip` with `python`, Anaconda(miniconda) was introduced to separate
 In order to use `csvlook`, `csvkit` was installed via `pip`.
 
 ```
-pip install csvkit
-pip install pelican Markdown
-pip install ghp-import
+% pip install csvkit
+% pip install pelican Markdown
+% pip install ghp-import
 ```
+
