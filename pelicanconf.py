@@ -20,7 +20,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Links
-LINKS = (('Dr.Bono\'s website', 'http://dbcls.jp/%7Ebono/'),
+LINKS = (('Dr.Bono\'s website', 'http://bonohu.jp/'),
 	 ('Europe PMC', 'https://europepmc.org/authors/0000-0003-4413-0651'),
          ('GitHub', 'https://github.com/bonohu'),
          ('ORCID', 'http://orcid.org/0000-0003-4413-0651'),
