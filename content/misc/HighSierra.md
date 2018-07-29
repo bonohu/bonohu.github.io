@@ -22,9 +22,9 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 Several tools were introduced with brew commands below.
 
 ```
-% brew install -v gnu-tar â€”with-default-names
-% brew install -v grep â€”with-default-names
-% brew install -v findutils â€”with-default-names
+% brew install -v gnu-tar --with-default-names
+% brew install -v grep --with-default-names
+% brew install -v findutils --with-default-names
 % brew install -v rsync
 % brew install -v pigz
 % brew install -v less
