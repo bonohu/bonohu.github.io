@@ -63,7 +63,7 @@
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
 							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-							<li ><a href="/category/shell.html">shell</a></li>
+							<li class="active"><a href="/category/shell.html">shell</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="http://bonohu.jp/">Dr.Bono's website</a></li>
@@ -97,7 +97,7 @@
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
 								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-								<li ><a href="/category/shell.html">shell</a></li>
+								<li class="active"><a href="/category/shell.html">shell</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                                                              
@@ -110,10 +110,35 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-    <h1>Authors on bonohu blog</h1>
+<article>
+	<h2>Local reverse complement</h2>
+	<p>To get reverse complement for specific DNA string is frequently needed in molecular biology.
+There were some web interface to do that, but it is not secure.
+Calculating reverse complement locally is ideal solution for that issue.</p>
+<p>In the search of an example code with practical usefulness in GitHub,
+I came across <a href="https://github.com/lh3/seqtk">seqtk</a>, which can do reverse complement locally.</p>
+<div class="highlight"><pre><span></span><span class="c">% git clone https://github.com/lh3/seqtk</span>
+<span class="c">% cd seqtk</span>
+<span class="c">% make</span>
+<span class="c">% ./seqtk seq -r DNA.fa &gt; revcomp.fa</span>
+</pre></div>
 
-    <ul>        <li><a href="/author/bonohu.html">bonohu</a> (24)</li>
-    </ul>
+
+<p>Input file: <code>DNA.fa</code></p>
+<div class="highlight"><pre><span></span>&gt;DNA.fa
+gattgtcacggtttaatgggattgtgaaggtgttagcggtttttcttgtaaaactgattt
+</pre></div>
+
+
+<p>Output file: <code>revcomp.fa</code></p>
+<div class="highlight"><pre><span></span>&gt;DNA.fa
+aaatcagttttacaagaaaaaccgctaacaccttcacaatcccattaaaccgtgacaatc
+</pre></div>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 日 29 7月 2018.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
