@@ -63,7 +63,7 @@
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
 							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-							<li ><a href="/category/shell.html">shell</a></li>
+							<li class="active"><a href="/category/shell.html">shell</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="http://bonohu.jp/">Dr.Bono's website</a></li>
@@ -97,7 +97,7 @@
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
 								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-								<li ><a href="/category/shell.html">shell</a></li>
+								<li class="active"><a href="/category/shell.html">shell</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                                                              
@@ -110,83 +110,53 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
+<article>
+	<h2>Tiny Perl script for formatting TSA entries</h2>
+	<p>When we submit relatively large entries to DDBJ, we use Mass Submission System (MSS).
+We will use MSS for submitting transcriptome sequence assembly (TSA) to DDBJ.</p>
+<p>After extracting the list of IDs from header lines of FASTA by command like <code>% perl -nle 'print $1 if(/^\&gt;(\S+)/) hoge.fasta &gt; id.txt'</code>, tiny Perl script called <code>TSA-SRA-writer.pl</code> to write formatted text for DDBJ submission might be useful. </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env perl</span>
+<span class="c1"># TSA-SRA-writer.pl</span>
+<span class="c1"># STDIN: list of IDs</span>
 
-<article>
-	<h3><a href="/perl-in-awk-mode.html">Perl in awk mode</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 月 05 2月 2018.</h6>
-	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
-<div class="highlight"><pre><span></span>perl -anle  &#39;print &quot;$F[0]\t$F[3]&quot; if ($F …</pre></div>
-		<p class="continue"><a href="/perl-in-awk-mode.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/running-kallisto.html">Running kallisto</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
-	<p>If a transcriptome sequence set is available for the organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
-<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
-kallisto quant -i index -o …</pre></div>
-		<p class="continue"><a href="/running-kallisto.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/installing-sleuth.html">Installing sleuth</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
-	<p>Following <a href="https://pachterlab.github.io/sleuth/download">instruction</a> in sleuth official page,
-sleuth was successfully install except there was a permission problem in my <code>/usr/local</code>.<br>
-I fixed that with a command, <code>sudo chown -R bono /usr/local</code>.</p>
-		<p class="continue"><a href="/installing-sleuth.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/why-blog-in-english.html">Why blog in English</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 土 20 1月 2018.</h6>
-	<p>I have continuously updated my blog in Japanese which was hosted in my server at home. The server was broken early this month, and I thought how to resume that.</p>
-<p>I published a book for biological data analysis in Japanese which was a clean summary of my blog in Japanese …</p>
-		<p class="continue"><a href="/why-blog-in-english.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/sparqlthon64.html">SPARQLthon64</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/dbcls.html">DBCLS</a> on 木 18 1月 2018.</h6>
-	<h2>day1</h2>
-<p>Joined <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon">SPARQLthon</a> for Jan 2018 was held at DBCLS Kashiwa. This was 64th  <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon64">SPARQLthon</a>.</p>
-<p>I will hack for the development of <a href="http://aoe.dbcls.jp">AOE</a>, index of public omics (gene expression) data.</p>
-<h2>day2</h2>
-<p>Tackling to hack parsers for inputing metadata from <a href="http://www.ncbi.nlm.nih.gov/geo/">NCBI GEO</a> utilizing DBCLS SRA API.
-Thanks to this API, we …</p>
-		<p class="continue"><a href="/sparqlthon64.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/hello-world.html">Hello, world!</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 火 16 1月 2018.</h6>
-	<h2>bonohu blog</h2>
-<p>Blog in English by bonohu has just been started using Pelican and github. This blog will focus on technical issues on data handling in life science.</p>
-<p>The website I referred.</p>
-<ul>
-<li><a href="https://qiita.com/akimach/items/dfcac164ac5669a6378e">https://qiita.com/akimach/items/dfcac164ac5669a6378e</a></li>
-</ul>
-<p>Shell commands to update contents below.</p>
-<div class="highlight"><pre><span></span><span class="c1"># switched to pelican branch,</span>
-<span class="n">git</span> <span class="n">checkout …</span></pre></div>
-		<p class="continue"><a href="/hello-world.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
+<span class="c1"># organism name</span>
+<span class="k">my</span> <span class="nv">$organism</span>     <span class="o">=</span> <span class="s">&quot;Hoge hoge&quot;</span><span class="p">;</span>
+<span class="c1"># tissue name</span>
+<span class="k">my</span> <span class="nv">$tissue_type</span>  <span class="o">=</span> <span class="s">&quot;fuga&quot;</span><span class="p">;</span>
 
-<div class="row" style="margin-bottom: -1.25em;">
-	<div class="small-12 columns text-center">
-		<div class="pagination-centered">
-			<ul class="pagination">
-				<li class="arrow"><a href="/author/bonohu2.html">&larr; Previous</a></li>
-				<li class=""><a href="/author/bonohu.html">1</a></li>
-				<li class=""><a href="/author/bonohu2.html">2</a></li>
-				<li class="current"><a href="/author/bonohu3.html">3</a></li>
-				<li class="arrow unavailable"><a href="#">&rarr; Next</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;STDIN&gt;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">chomp</span><span class="p">;</span>
+        <span class="nv">$seqid</span> <span class="o">=</span> <span class="nv">$_</span><span class="p">;</span>
+        <span class="k">print</span> <span class="s">&quot;$seqid\tsource\t1..E\torganism\t$organism\n&quot;</span><span class="p">;</span>
+        <span class="k">print</span> <span class="s">&quot;\t\t\tmol_type\tmRNA\n&quot;</span><span class="p">;</span>
+        <span class="k">print</span> <span class="s">&quot;\t\t\ttissue_type\t$tissue_type\n&quot;</span><span class="p">;</span>
+        <span class="k">print</span> <span class="s">&quot;\t\t\tsubmitter_seqid\t$seqid\n&quot;</span><span class="p">;</span>
+        <span class="k">print</span> <span class="s">&quot;\t\t\tff_definition\t&quot;</span><span class="o">.</span><span class="s">&#39;@@[organism]@@ RNA, @@[submitter_seqid]@@&#39;</span><span class="o">.</span><span class="s">&quot;\n&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 月 03 9月 2018.</h6>
+</article>
 
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
