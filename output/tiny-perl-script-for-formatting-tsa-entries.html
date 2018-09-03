@@ -112,9 +112,12 @@
 						<div class="medium-9 small-12 columns" role="content">
 <article>
 	<h2>Tiny Perl script for formatting TSA entries</h2>
-	<p>When we submit relatively large entries to DDBJ, we use Mass Submission System (MSS).
-We will use MSS for submitting transcriptome sequence assembly (TSA) to DDBJ.</p>
-<p>After extracting the list of IDs from header lines of FASTA by command like <code>% perl -nle 'print $1 if(/^\&gt;(\S+)/) hoge.fasta &gt; id.txt'</code>, tiny Perl script called <code>TSA-SRA-writer.pl</code> to write formatted text for DDBJ submission might be useful. </p>
+	<p>When we submit relatively large entries to DDBJ, we use <a href="https://www.ddbj.nig.ac.jp/ddbj/mss-e.html">Mass Submission System (MSS)</a>.
+We will use MSS for submitting <a href="https://www.ddbj.nig.ac.jp/ddbj/tsa-e.html">transcriptome sequence assembly (TSA)</a> to DDBJ.</p>
+<p>After extracting the list of IDs from header lines of FASTA by command like </p>
+<p><code>% perl -nle 'print $1 if(/^\&gt;(\S+)/) hoge.fasta &gt; id.txt'</code></p>
+<p>tiny Perl script called <code>TSA-SRA-writer.pl</code> to write formatted text for DDBJ submission might be useful. 
+User should note that only the latter (but huge) body of the formatted text is described by this script, and user needed to add the header part of that.</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -143,7 +146,7 @@ We will use MSS for submitting transcriptome sequence assembly (TSA) to DDBJ.</p
 
 <span class="k">while</span><span class="p">(</span><span class="sr">&lt;STDIN&gt;</span><span class="p">)</span> <span class="p">{</span>
         <span class="nb">chomp</span><span class="p">;</span>
-        <span class="nv">$seqid</span> <span class="o">=</span> <span class="nv">$_</span><span class="p">;</span>
+        <span class="k">my</span> <span class="nv">$seqid</span> <span class="o">=</span> <span class="nv">$_</span><span class="p">;</span>
         <span class="k">print</span> <span class="s">&quot;$seqid\tsource\t1..E\torganism\t$organism\n&quot;</span><span class="p">;</span>
         <span class="k">print</span> <span class="s">&quot;\t\t\tmol_type\tmRNA\n&quot;</span><span class="p">;</span>
         <span class="k">print</span> <span class="s">&quot;\t\t\ttissue_type\t$tissue_type\n&quot;</span><span class="p">;</span>
