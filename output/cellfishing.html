@@ -62,7 +62,7 @@
 						<li><label>Categories</label></li>
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
-							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
+							<li class="active"><a href="/category/rnaseq.html">rnaseq</a></li>
 							<li ><a href="/category/shell.html">shell</a></li>
 
 						<li><label>Links</label></li>
@@ -96,7 +96,7 @@
 						<ul class="left">
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
-								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
+								<li class="active"><a href="/category/rnaseq.html">rnaseq</a></li>
 								<li ><a href="/category/shell.html">shell</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
@@ -110,102 +110,48 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
+<article>
+	<h2>CellFishing</h2>
+	<p>Try to use <a href="https://doi.org/10.1101/374462">CellFishing</a> written in <a href="https://julialang.org">Julia</a>. 
+It was my first time to use code in Julia, so I started from the installation of Julia with homebrew.</p>
+<div class="highlight"><pre><span></span># Install Julia
+% brew cask install julia
+# Install CellFishing
+% julia -e &#39;using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))&#39;
+# Run test for CellFishing
+% julia -e &#39;using Pkg; Pkg.test(&quot;CellFishing&quot;)&#39;
+</pre></div>
 
-<article>
-	<h3><a href="/sparqlthon65.html">SPARQLthon65</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/dbcls.html">DBCLS</a> on 木 15 2月 2018.</h6>
-	<p>Joined <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon">SPARQLthon</a> held at DBCLS Mishima located at National Institute of Genetics. This was <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon65">65th SPARQLthon</a>.</p>
-<p>Discussed the development of search system for public high-throughput sequencing data at Sequence Read Archive (SRA).</p>
-		<p class="continue"><a href="/sparqlthon65.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/increasing-the-usability-of-fantom5-data.html">Increasing the usability of FANTOM5 data</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 火 06 2月 2018.</h6>
-	<p>Last summer, our work on the use of FANTOM5 data was published in Scientific Data.</p>
-<blockquote>
-<p><a href="http://doi.org/10.1038/sdata.2017.105">RefEx, a reference gene expression dataset as a web tool for the functional analysis of genes</a></p>
-</blockquote>
-<p>This article was included in <a href="https://www.nature.com/collections/fantom5">FANTOM5 collection</a>. It was a great pleasure to be published together with FANTOM5 data …</p>
-		<p class="continue"><a href="/increasing-the-usability-of-fantom5-data.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/perl-in-awk-mode.html">Perl in awk mode</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 月 05 2月 2018.</h6>
-	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
-<div class="highlight"><pre><span></span>perl -anle  &#39;print &quot;$F[0]\t$F[3]&quot; if ($F …</pre></div>
-		<p class="continue"><a href="/perl-in-awk-mode.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/running-kallisto.html">Running kallisto</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
-	<p>If a transcriptome sequence set is available for the organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
-<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
-kallisto quant -i index -o …</pre></div>
-		<p class="continue"><a href="/running-kallisto.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/installing-sleuth.html">Installing sleuth</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
-	<p>Following <a href="https://pachterlab.github.io/sleuth/download">instruction</a> in sleuth official page,
-sleuth was successfully install except there was a permission problem in my <code>/usr/local</code>.<br>
-I fixed that with a command, <code>sudo chown -R bono /usr/local</code>.</p>
-		<p class="continue"><a href="/installing-sleuth.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/why-blog-in-english.html">Why blog in English</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 土 20 1月 2018.</h6>
-	<p>I have continuously updated my blog in Japanese which was hosted in my server at home. The server was broken early this month, and I thought how to resume that.</p>
-<p>I published a book for biological data analysis in Japanese which was a clean summary of my blog in Japanese …</p>
-		<p class="continue"><a href="/why-blog-in-english.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/sparqlthon64.html">SPARQLthon64</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/dbcls.html">DBCLS</a> on 木 18 1月 2018.</h6>
-	<h2>day1</h2>
-<p>Joined <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon">SPARQLthon</a> for Jan 2018 was held at DBCLS Kashiwa. This was 64th  <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon64">SPARQLthon</a>.</p>
-<p>I will hack for the development of <a href="http://aoe.dbcls.jp">AOE</a>, index of public omics (gene expression) data.</p>
-<h2>day2</h2>
-<p>Tackling to hack parsers for inputing metadata from <a href="http://www.ncbi.nlm.nih.gov/geo/">NCBI GEO</a> utilizing DBCLS SRA API.
-Thanks to this API, we …</p>
-		<p class="continue"><a href="/sparqlthon64.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/hello-world.html">Hello, world!</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 火 16 1月 2018.</h6>
-	<h2>bonohu blog</h2>
-<p>Blog in English by bonohu has just been started using Pelican and github. This blog will focus on technical issues on data handling in life science.</p>
-<p>The website I referred.</p>
-<ul>
-<li><a href="https://qiita.com/akimach/items/dfcac164ac5669a6378e">https://qiita.com/akimach/items/dfcac164ac5669a6378e</a></li>
-</ul>
-<p>Shell commands to update contents below.</p>
-<div class="highlight"><pre><span></span><span class="c1"># switched to pelican branch,</span>
-<span class="n">git</span> <span class="n">checkout …</span></pre></div>
-		<p class="continue"><a href="/hello-world.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
 
-<div class="row" style="margin-bottom: -1.25em;">
-	<div class="small-12 columns text-center">
-		<div class="pagination-centered">
-			<ul class="pagination">
-				<li class="arrow"><a href="/index2.html">&larr; Previous</a></li>
-				<li class=""><a href="/index.html">1</a></li>
-				<li class=""><a href="/index2.html">2</a></li>
-				<li class="current"><a href="/index3.html">3</a></li>
-				<li class="arrow unavailable"><a href="#">&rarr; Next</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
+<p>After installing julia, I followed the instruction in <a href="https://github.com/bicycle1885/CellFishing.jl">CellFishing</a> website, but the test code was failed. 
+According to CellFishing developer, the reason for that failure was that <code>zstd</code> was missing. So I installed <code>zstd</code>.</p>
+<div class="highlight"><pre><span></span><span class="c">% brew install -v zstd</span>
+</pre></div>
 
+
+<p>And I tried command-line interface for CellFishing.
+Some packages (<code>HDF5</code> and <code>DocOpt</code>) were requred to run <code>cellfishing build</code> command.</p>
+<div class="highlight"><pre><span></span><span class="c">% julia -e &#39;using Pkg; Pkg.add(&quot;HDF5&quot;)&#39;</span>
+<span class="c">% julia -e &#39;using Pkg; Pkg.add(&quot;DocOpt&quot;)&#39;</span>
+</pre></div>
+
+
+<p>Of course, data for the search was required. It could be downloaded from 
+http://bimsbstatic.mdc-berlin.de/rajewsky/PSCA/all_sgete_4GU75.loom.gz liked from <a href="https://shiny.mdc-berlin.de/psca/">Planaria Single Cell Atlas website</a>.</p>
+<div class="highlight"><pre><span></span><span class="c">% curl -O http://bimsbstatic.mdc-berlin.de/rajewsky/PSCA/all_sgete_4GU75.loom.gz </span>
+<span class="c">% gzip -dc all_sgete_4GU75.loom.gz &gt; Plass2018.dge.loom</span>
+</pre></div>
+
+
+<p>After getting the file, I successfully ran the code!</p>
+<div class="highlight"><pre><span></span><span class="c">% ./bin/cellfishing build Plass2018.dge.loom</span>
+<span class="c">% ./bin/cellfishing search Plass2018.dge.loom.cf Plass2018.dge.loom &gt;neighbors.tsv</span>
+</pre></div>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 火 06 11月 2018.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
