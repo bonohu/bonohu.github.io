@@ -112,40 +112,44 @@
 						<div class="medium-9 small-12 columns" role="content">
 <article>
 	<h2>CellFishing</h2>
-	<p>Try to use <a href="https://doi.org/10.1101/374462">CellFishing</a> written in <a href="https://julialang.org">Julia</a>. 
-It was my first time to use code in Julia, so I started from the installation of Julia with homebrew.</p>
+	<p>I tried to use <a href="https://doi.org/10.1101/374462">CellFishing</a> written in <a href="https://julialang.org">Julia</a>. 
+It was my first time to use Julia, so I started from the installation of Julia with Homebrew.</p>
 <div class="highlight"><pre><span></span># Install Julia
-% brew cask install julia
+brew cask install julia
 # Install CellFishing
-% julia -e &#39;using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))&#39;
+julia -e &#39;using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))&#39;
 # Run test for CellFishing
-% julia -e &#39;using Pkg; Pkg.test(&quot;CellFishing&quot;)&#39;
+julia -e &#39;using Pkg; Pkg.test(&quot;CellFishing&quot;)&#39;
 </pre></div>
 
 
 <p>After installing julia, I followed the instruction in <a href="https://github.com/bicycle1885/CellFishing.jl">CellFishing</a> website, but the test code was failed. 
 According to CellFishing developer, the reason for that failure was that <code>zstd</code> was missing. So I installed <code>zstd</code>.</p>
-<div class="highlight"><pre><span></span><span class="c">% brew install -v zstd</span>
+<div class="highlight"><pre><span></span># Install zstd via Homebrew
+brew install -v zstd
 </pre></div>
 
 
 <p>And I tried command-line interface for CellFishing.
 Some packages (<code>HDF5</code> and <code>DocOpt</code>) were requred to run <code>cellfishing build</code> command.</p>
-<div class="highlight"><pre><span></span><span class="c">% julia -e &#39;using Pkg; Pkg.add(&quot;HDF5&quot;)&#39;</span>
-<span class="c">% julia -e &#39;using Pkg; Pkg.add(&quot;DocOpt&quot;)&#39;</span>
+<div class="highlight"><pre><span></span># Install required packages in julia
+julia -e &#39;using Pkg; Pkg.add(&quot;HDF5&quot;)&#39;
+julia -e &#39;using Pkg; Pkg.add(&quot;DocOpt&quot;)&#39;
 </pre></div>
 
 
 <p>Of course, data for the search was required. It could be downloaded from 
 http://bimsbstatic.mdc-berlin.de/rajewsky/PSCA/all_sgete_4GU75.loom.gz liked from <a href="https://shiny.mdc-berlin.de/psca/">Planaria Single Cell Atlas website</a>.</p>
-<div class="highlight"><pre><span></span><span class="c">% curl -O http://bimsbstatic.mdc-berlin.de/rajewsky/PSCA/all_sgete_4GU75.loom.gz </span>
-<span class="c">% gzip -dc all_sgete_4GU75.loom.gz &gt; Plass2018.dge.loom</span>
+<div class="highlight"><pre><span></span># Getting data for the search
+curl -O http://bimsbstatic.mdc-berlin.de/rajewsky/PSCA/all_sgete_4GU75.loom.gz 
+gzip -dc all_sgete_4GU75.loom.gz &gt; Plass2018.dge.loom
 </pre></div>
 
 
 <p>After getting the file, I successfully ran the code!</p>
-<div class="highlight"><pre><span></span><span class="c">% ./bin/cellfishing build Plass2018.dge.loom</span>
-<span class="c">% ./bin/cellfishing search Plass2018.dge.loom.cf Plass2018.dge.loom &gt;neighbors.tsv</span>
+<div class="highlight"><pre><span></span># Run CellFishing
+./bin/cellfishing build Plass2018.dge.loom
+./bin/cellfishing search Plass2018.dge.loom.cf Plass2018.dge.loom &gt;neighbors.tsv
 </pre></div>
 	<hr/>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 火 06 11月 2018.</h6>
