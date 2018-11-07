@@ -11,6 +11,8 @@ brew cask install julia
 julia -e 'using Pkg; Pkg.add(PackageSpec(url="git://github.com/bicycle1885/CellFishing.jl.git"))'
 # Run test for CellFishing
 julia -e 'using Pkg; Pkg.test("CellFishing")'
+# git clone CellFishing
+git clone https://github.com/bicycle1885/CellFishing.jl
 ```
 
 After installing julia, I followed the instruction in [CellFishing](https://github.com/bicycle1885/CellFishing.jl) website, but the test code was failed. 
