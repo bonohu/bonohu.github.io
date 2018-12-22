@@ -130,7 +130,8 @@ With a great help from Ishii-san, I could do it finally (<a href="https://github
 The files to be used should be described in <code>inputs:</code>.</p>
 <p>Then, other part (<code>CommandLineTool</code>) for the workflow was coded with the name <a href="https://github.com/dbcls/AOE/blob/master/pigz.cwl"><code>pigz.cwl</code></a> which compresses the output from the other command.</p>
 <p>Finally the <code>Workflow</code> named <a href="https://github.com/dbcls/AOE/blob/master/gethoge-and-pigz.cwl"><code>gethoge-and-pigz.cwl</code></a> was coded by looking at the great reference described above.
-There was some trials in setting the output files, but it was not so hard compared with the former issue (additional file inclusion).
+There was some trials in setting the output files, but it was not so hard compared with the former issue (additional file inclusion).</p>
+<p>These <code>cwl</code> files were successfully pushed to <a href="https://github.com/dbcls/AOE">GitHub pages</a> and thus <a href="https://view.commonwl.org/workflows/github.com/dbcls/AOE/blob/3ab6db7ca9eb982111e0aa038e03a74183fd06bb/gethoge-and-pigz.cwl">visualized with the power of public web service</a>, where you can see our workflow in a diagram representation. 
 And, my workflow can be run with the command below now!</p>
 <div class="highlight"><pre><span></span>cwltool perl-gethoge.cwl --file 00getlistofxRX.pl  --ipfile IP.txt
 </pre></div>
