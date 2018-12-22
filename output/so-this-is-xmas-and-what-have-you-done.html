@@ -60,7 +60,7 @@
 					<ul class="off-canvas-list">
 						<li><a href="">Home</a></li>
 						<li><label>Categories</label></li>
-							<li ><a href="/category/dbcls.html">DBCLS</a></li>
+							<li class="active"><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
 							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
 							<li ><a href="/category/shell.html">shell</a></li>
@@ -94,7 +94,7 @@
 
 					<section class="top-bar-section">
 						<ul class="left">
-								<li ><a href="/category/dbcls.html">DBCLS</a></li>
+								<li class="active"><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
 								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
 								<li ><a href="/category/shell.html">shell</a></li>
@@ -110,10 +110,38 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-    <h1>Authors on bonohu blog</h1>
+<article>
+	<h2>So this is Xmas And what have you done?</h2>
+	<p>I joined <a href="http://2018.biohackathon.org/hackathon">BioHackathon2018</a> held at Matsue.
+I also joined <a href="https://github.com/pitagora-galaxy/cwl/wiki/CWL-Workshop-Tokyo-2018">Common Workflow Language (CWL) Workshop Tokyo 2018</a> held at Shibuya prior to the hackathon, and learned a little bit about CWL.</p>
+<p>I have other tasks (update searchability of All of gene expression (AOE)) to be discussed in the hackathon, but it was a very good chance to implement my data analysis pipeline with CWL for making an index for AOE.
+I asked <a href="https://github.com/manabuishii">Ishii-san</a> about the possibility of CWLization for non-docker workflow, and he said 'It definitely works!'.
+So I tried to code it concurrently.</p>
+<p>I wrote my code with a great <a href="https://github.com/pitagora-galaxy/cwl/wiki/CWL-Start-Guide-JP">reference material (in Japanese)</a> which was shown in CWL Workshop Tokyo 2018.</p>
+<p>For the reference, my original script to run was like <a href="https://github.com/dbcls/AOE/blob/master/00getlistofxRX.sh">this</a>.</p>
+<div class="highlight"><pre><span></span>perl 00getlistofxRX.pl \
+| pigz -c &gt; xRX.json.gz
+</pre></div>
 
-    <ul>        <li><a href="/author/bonohu.html">bonohu</a> (29)</li>
-    </ul>
+
+<p>First I tried to make <code>CommandLineTool</code> by modifying the sample code for my case.
+Because my code requires an additional file which tells the IP address of API server, I failed to do it initially.
+With a great help from Ishii-san, I could do it finally (<a href="https://github.com/dbcls/AOE/blob/master/perl-gethoge.cwl"><code>perl-gethoge.cwl</code></a>).
+The files to be used should be described in <code>inputs:</code>.</p>
+<p>Then, other part (<code>CommandLineTool</code>) for the workflow was coded with the name <a href="https://github.com/dbcls/AOE/blob/master/pigz.cwl"><code>pigz.cwl</code></a> which compresses the output from the other command.</p>
+<p>Finally the <code>Workflow</code> named <a href="https://github.com/dbcls/AOE/blob/master/gethoge-and-pigz.cwl"><code>gethoge-and-pigz.cwl</code></a> was coded by looking at the great reference described above.
+There was some trials in setting the output files, but it was not so hard compared with the former issue (additional file inclusion).
+And, my workflow can be run with the command below now!</p>
+<div class="highlight"><pre><span></span>cwltool perl-gethoge.cwl --file 00getlistofxRX.pl  --ipfile IP.txt
+</pre></div>
+
+
+<p>Thanks a lot, Ishii-san and other hackers in CWL community especially for <a href="https://github.com/mr-c">Michael</a> who gave me a lot of chocolates both at Tokyo and Matsue!</p>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/dbcls.html">DBCLS</a> on 金 24 8月 2018.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
