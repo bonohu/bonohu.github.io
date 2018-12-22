@@ -27,7 +27,10 @@ Then, other part (`CommandLineTool`) for the workflow was coded with the name [`
 
 Finally the `Workflow` named [`gethoge-and-pigz.cwl`](https://github.com/dbcls/AOE/blob/master/gethoge-and-pigz.cwl) was coded by looking at the great reference described above.
 There was some trials in setting the output files, but it was not so hard compared with the former issue (additional file inclusion).
+
+These `cwl` files were successfully pushed to [GitHub pages](https://github.com/dbcls/AOE) and thus [visualized with the power of public web service](https://view.commonwl.org/workflows/github.com/dbcls/AOE/blob/3ab6db7ca9eb982111e0aa038e03a74183fd06bb/gethoge-and-pigz.cwl), where you can see our workflow in a diagram representation. 
 And, my workflow can be run with the command below now!
+
 
 ```
 cwltool perl-gethoge.cwl --file 00getlistofxRX.pl  --ipfile IP.txt
