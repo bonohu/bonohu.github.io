@@ -1,5 +1,5 @@
 Title: So this is Xmas And what have you done?
-Date: 2018-08-24 09:00
+Date: 2018-12-21 23:00
 Category: DBCLS
 
 I joined [BioHackathon2018](http://2018.biohackathon.org/hackathon) held at Matsue.
@@ -32,6 +32,8 @@ And, my workflow can be run with the command below now!
 ```
 cwltool perl-gethoge.cwl --file 00getlistofxRX.pl  --ipfile IP.txt
 ```
+
+Of course, `IP.txt` must be specified (not in GitHub repository now, though).
 
 Thanks a lot, Ishii-san and other hackers in CWL community especially for [Michael](https://github.com/mr-c) who gave me a lot of chocolates both at Tokyo and Matsue!
 
