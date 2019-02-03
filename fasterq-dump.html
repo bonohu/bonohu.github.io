@@ -110,15 +110,8 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-							<div class="row">
-								<div class="small-12 columns">
-									<h2>Category: rnaseq</h2>
-								</div>
-							</div>
-
 <article>
-	<h3><a href="/fasterq-dump.html">fasterq-dump</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 土 02 2月 2019.</h6>
+	<h2>fasterq-dump</h2>
 	<p>I noticed the announcement in <a href="https://github.com/ncbi/sra-tools/wiki">NCBI's sra-tools GitHub wiki</a></p>
 <blockquote>
 <p>With release 2.9.1 of sra-tools we have finally made available the tool <code>fasterq-dump</code>, a replacement for the much older <code>fastq-dump</code> tool. </p>
@@ -128,85 +121,31 @@
 <li>Just specify a run ID of SRA.</li>
 </ol>
 <div class="highlight"><pre><span></span># Just fasterq-dump
-% fasterq-dump …</pre></div>
-		<p class="continue"><a href="/fasterq-dump.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/cellfishing.html">CellFishing</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 火 06 11月 2018.</h6>
-	<p>I tried to use <a href="https://doi.org/10.1101/374462">CellFishing</a> written in <a href="https://julialang.org">Julia</a>. 
-It was my first time to use Julia, so I started from the installation of Julia with Homebrew.</p>
-<div class="highlight"><pre><span></span># Install Julia
-brew cask install julia
-# Install CellFishing
-julia -e &#39;using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))&#39;
-# Run …</pre></div>
-		<p class="continue"><a href="/cellfishing.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/trinity-will-not-run.html">Trinity will not run</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 水 06 6月 2018.</h6>
-	<p>After some software updates, Trinity ended with error below.</p>
-<blockquote>
-<p>dyld: Library not loaded: /usr/local/opt/gcc/lib/gcc/7/libgomp.1.dylib                                  <br>
-Referenced from: /usr/local/Cellar/trinity/2.5.1/util/..//Inchworm/bin/fastaToKmerCoverageStats
-Reason: image not found</p>
-</blockquote>
-<p>I checked the file <code>/usr/local/opt/gcc/lib/gcc …</code></p>
-		<p class="continue"><a href="/trinity-will-not-run.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/stringtie.html">StringTie</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 金 18 5月 2018.</h6>
-	<p>After the execution of HISAT2, aligned reads can be assembled using <a href="http://www.ccb.jhu.edu/software/stringtie/">StringTie</a>.</p>
-<blockquote>
-<p>StringTie is a fast and highly efficient assembler of RNA-Seq alignments into potential transcripts.</p>
-</blockquote>
-<p>The pipeline to process data by HISAT2 and StringTie is similar to that by TopHat and Cufflinks. Genome annotation file (GTF) can be used …</p>
-		<p class="continue"><a href="/stringtie.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/hisat2.html">HISAT2</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 木 17 5月 2018.</h6>
-	<p>HISAT2 is a successor of <a href="https://ccb.jhu.edu/software/tophat/index.shtml">TopHat</a>.</p>
-<blockquote>
-<p>TopHat has entered a low maintenance, low support stage as it is now largely superseded by HISAT2 which provides the same core functionality (i.e. spliced alignment of RNA-Seq reads), in a more accurate and much more efficient way.</p>
-</blockquote>
-<p>Genome annotation file (GTF) is …</p>
-		<p class="continue"><a href="/hisat2.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/align-and-estimate-abundance.html">Align and estimate abundance</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 水 07 3月 2018.</h6>
-	<p>If assembled transcriptome sequence set and RNA-seq reads for that are available for an organism, we can align reads and estimate transcript abundance by running the script (<code>align_and_estimate_abundance.pl</code>) in the Trinity software package. When the Trinity package was installed using Homebrew, that script is installed in <code>/usr/local/Cellar …</code></p>
-		<p class="continue"><a href="/align-and-estimate-abundance.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/running-kallisto.html">Running kallisto</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
-	<p>If a transcriptome sequence set is available for the organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
-<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
-kallisto quant -i index -o …</pre></div>
-		<p class="continue"><a href="/running-kallisto.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/installing-sleuth.html">Installing sleuth</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
-	<p>Following <a href="https://pachterlab.github.io/sleuth/download">instruction</a> in sleuth official page,
-sleuth was successfully install except there was a permission problem in my <code>/usr/local</code>.<br>
-I fixed that with a command, <code>sudo chown -R bono /usr/local</code>.</p>
-		<p class="continue"><a href="/installing-sleuth.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
+% fasterq-dump DRR100656
+142.09s user 78.79s system 10% cpu 33:32.82 total
+</pre></div>
 
 
+<p>It takes about 33min.</p>
+<ol>
+<li>Download SRA-formatted file from DDBJ DRA and dump it.</li>
+</ol>
+<div class="highlight"><pre><span></span># Download SRA from DDBJ and then fasterq-dump
+% curl -O ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/sra/ByExp/sra/DRX/DRX094/DRX094089/DRR100656/DRR100656.sra
+% fasterq-dump DRR100657.sra
+162.76s user 47.46s system 242% cpu 1:26.76 total
+</pre></div>
+
+
+<p>It takes around 5 min to download the file.
+And the conversion from SRA to FASTQ takes 1.5 min.</p>
+<p>It was much faster to fetch SRA and then dump it while we have to get the URLs to do so.
+I regularly get the URLs for that from SRA download links in <a href="http://sra.dbcls.jp/">DBCLS SRA</a>.</p>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 土 02 2月 2019.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
