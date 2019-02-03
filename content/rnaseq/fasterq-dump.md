@@ -26,7 +26,7 @@ It takes about 33min.
 ```
 
 It takes around 5 min to download the file.
-And the conversion from SRA to FASTQ takes 1.5 min.
+And the conversion from SRA to FASTQ takes 1.5 min. `242%` indicates there was parallel effect!
 
 It was much faster to fetch SRA and then dump it while we have to get the URLs to do so.
 I regularly get the URLs for that from SRA download links in [DBCLS SRA](http://sra.dbcls.jp/).
