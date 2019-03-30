@@ -60,7 +60,7 @@
 					<ul class="off-canvas-list">
 						<li><a href="">Home</a></li>
 						<li><label>Categories</label></li>
-							<li ><a href="/category/dbcls.html">DBCLS</a></li>
+							<li class="active"><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
 							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
 							<li ><a href="/category/shell.html">shell</a></li>
@@ -94,7 +94,7 @@
 
 					<section class="top-bar-section">
 						<ul class="left">
-								<li ><a href="/category/dbcls.html">DBCLS</a></li>
+								<li class="active"><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
 								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
 								<li ><a href="/category/shell.html">shell</a></li>
@@ -110,10 +110,26 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-    <h1>Authors on bonohu blog</h1>
-    <ul>
-        <li><a href="/author/bonohu.html">bonohu</a> (31)</li>
-    </ul>
+<article>
+	<h2>SPARQLthon78</h2>
+	<p>Joined <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon">SPARQLthon</a> held at DBCLS Mishima.
+This was <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon78">78th SPARQLthon</a>.</p>
+<p>First, I tried to run SPARQL from UNIX command line for the integration of unfamiliar data.
+According to the SPARQL book (p145), I could make it.</p>
+<div class="highlight"><pre><span></span><span class="c">% curl -F query=@hoge.rq -H &quot;Accept: application/sparql-results+xml&quot; (URL for SPARQL endpoint)</span>
+</pre></div>
+
+
+<p>SPARQL in <code>hoge.rq</code>, and the result in XML.
+You can change to JSON by replacing <code>xml</code> to <code>json</code>.</p>
+<p>On the second day, I tackled to update <a href="http://aoe.dbcls.jp/">AOE</a> data for the latest one.
+By fixing description in the data from DDBJ GEA (the information about date is not formally described, in the comment line..), we can include data from GEA.
+It is not easy to automate this process now.</p>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/dbcls.html">DBCLS</a> on 金 29 3月 2019.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
