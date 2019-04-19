@@ -12,6 +12,10 @@ fgrep -f keywords.txt data.txt
 
 where `keywords.txt` contains a list of keywords ('one keyword in one line' manner), and `data.txt` is a bunch of data to be greped.
 
+In fact, we can make use of `grep -f` command instead of `fgrep -f`. 
+I am not sure about the difference currently.
+
+
 
 
 

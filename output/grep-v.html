@@ -63,7 +63,7 @@
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
 							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-							<li ><a href="/category/shell.html">shell</a></li>
+							<li class="active"><a href="/category/shell.html">shell</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="http://bonohu.jp/">Dr.Bono's website</a></li>
@@ -97,7 +97,7 @@
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
 								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-								<li ><a href="/category/shell.html">shell</a></li>
+								<li class="active"><a href="/category/shell.html">shell</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                                                              
@@ -110,58 +110,30 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-
 <article>
-	<h3><a href="/why-blog-in-english.html">Why blog in English</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 土 20 1月 2018.</h6>
-	<p>I have continuously updated my blog in Japanese which was hosted in my server at home. The server was broken early this month, and I thought how to resume that.</p>
-<p>I published a book for biological data analysis in Japanese which was a clean summary of my blog in Japanese …</p>
-		<p class="continue"><a href="/why-blog-in-english.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/sparqlthon64.html">SPARQLthon64</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/dbcls.html">DBCLS</a> on 木 18 1月 2018.</h6>
-	<h2>day1</h2>
-<p>Joined <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon">SPARQLthon</a> for Jan 2018 was held at DBCLS Kashiwa. This was 64th  <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon64">SPARQLthon</a>.</p>
-<p>I will hack for the development of <a href="http://aoe.dbcls.jp">AOE</a>, index of public omics (gene expression) data.</p>
-<h2>day2</h2>
-<p>Tackling to hack parsers for inputing metadata from <a href="http://www.ncbi.nlm.nih.gov/geo/">NCBI GEO</a> utilizing DBCLS SRA API.
-Thanks to this API, we …</p>
-		<p class="continue"><a href="/sparqlthon64.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/hello-world.html">Hello, world!</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 火 16 1月 2018.</h6>
-	<h2>bonohu blog</h2>
-<p>Blog in English by bonohu has just been started using Pelican and github. This blog will focus on technical issues on data handling in life science.</p>
-<p>The website I referred.</p>
-<ul>
-<li><a href="https://qiita.com/akimach/items/dfcac164ac5669a6378e">https://qiita.com/akimach/items/dfcac164ac5669a6378e</a></li>
-</ul>
-<p>Shell commands to update contents below.</p>
-<div class="highlight"><pre><span></span><span class="c1"># switched to pelican branch,</span>
-<span class="n">git</span> <span class="n">checkout …</span></pre></div>
-		<p class="continue"><a href="/hello-world.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
+	<h2>grep -v</h2>
+	<p><code>grep</code> has various options.
+I frequently use <code>-v</code> option to filter lines without the keyword.</p>
+<div class="highlight"><pre><span></span>grep -v human data.txt
+</pre></div>
 
-<div class="row" style="margin-bottom: -1.25em;">
-	<div class="small-12 columns text-center">
-		<div class="pagination-centered">
-			<ul class="pagination">
-				<li class="arrow"><a href="/index3.html">&larr; Previous</a></li>
-				<li class=""><a href="/index.html">1</a></li>
-				<li class=""><a href="/index2.html">2</a></li>
-				<li class=""><a href="/index3.html">3</a></li>
-				<li class="current"><a href="/index4.html">4</a></li>
-				<li class="arrow unavailable"><a href="#">&rarr; Next</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
 
+<p>where <code>data.txt</code> is a bunch of data to be greped.
+We can filter <em>out</em> lines with keyword <em>human</em>. </p>
+<p>Other example is to filter the lines which have a value in the first column.
+When the first column is missing, head of the line is '\t' (tab character) in the tab-deliminated text.
+We can make use of <code>grep -v</code> command below to filter out the lines without the first column.</p>
+<div class="highlight"><pre><span></span>grep -v ^$&#39;\t&#39; data.txt
+</pre></div>
+
+
+<p><code>^</code> means the head of line, and <code>$'\t'</code> means tab character.
+It greatly enhances the efficiecy of our study to have a list of lines with required data.</p>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 金 19 4月 2019.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
