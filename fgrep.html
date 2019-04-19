@@ -63,7 +63,7 @@
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
 							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-							<li ><a href="/category/shell.html">shell</a></li>
+							<li class="active"><a href="/category/shell.html">shell</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="http://bonohu.jp/">Dr.Bono's website</a></li>
@@ -97,7 +97,7 @@
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
 								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-								<li ><a href="/category/shell.html">shell</a></li>
+								<li class="active"><a href="/category/shell.html">shell</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                                                              
@@ -110,10 +110,20 @@
 					<div class="row">
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
-    <h1>Authors on bonohu blog</h1>
-    <ul>
-        <li><a href="/author/bonohu.html">bonohu</a> (32)</li>
-    </ul>
+<article>
+	<h2>fgrep</h2>
+	<p>It turned out that the command I regularly use to search a bunch of data is not known to others.</p>
+<p>I frequently use <code>fgrep</code> to grep against a list of keywords (i.e. IDs).</p>
+<div class="highlight"><pre><span></span>fgrep -f keywords.txt data.txt
+</pre></div>
+
+
+<p>where <code>keywords.txt</code> contains a list of keywords ('one keyword in one line' manner), and <code>data.txt</code> is a bunch of data to be greped.</p>
+	<hr/>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 木 18 4月 2019.</h6>
+</article>
+
+<hr/>
 						</div>
 						<!-- End Main Content -->
 						<!-- Sidebar -->
