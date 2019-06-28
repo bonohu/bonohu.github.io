@@ -112,6 +112,13 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
+	<h3><a href="/parallelized-blat.html">parallelized BLAT</a></h3>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/misc.html">misc</a> on 火 01 5月 2018.</h6>
+	<p>As I had to map assembled reads to the genomic sequence, I used BLAT (the BLAST-like Alignment Tool) for that purpose. BLAT was so fast for landing reads to genomic sequence, but it can be slow if reads are so many. I thought it would be so nice to have …</p>
+		<p class="continue"><a href="/parallelized-blat.html">Continue reading &raquo;</a></p>
+</article>
+<hr />
+<article>
 	<h3><a href="/sparqlthon67.html">SPARQLthon67</a></h3>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/dbcls.html">DBCLS</a> on 金 27 4月 2018.</h6>
 	<p>Joined <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon">SPARQLthon</a> held at DBCLS Kashiwa. This was <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon67">67th SPARQLthon</a>.</p>
@@ -205,15 +212,6 @@ In recent years, I regularly use <code>blastdbcmd</code> in NCBI BLAST suite. To
 	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
 <div class="highlight"><pre><span></span><span class="nv">perl</span> <span class="o">-</span><span class="nv">anle</span>  <span class="s1">&#39;</span><span class="s">print &quot;$F[0]</span><span class="se">\t</span><span class="s">$F[3]&quot; if ($F …</span></pre></div>
 		<p class="continue"><a href="/perl-in-awk-mode.html">Continue reading &raquo;</a></p>
-</article>
-<hr />
-<article>
-	<h3><a href="/running-kallisto.html">Running kallisto</a></h3>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
-	<p>If a transcriptome sequence set is available for the organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
-<div class="highlight"><pre><span></span><span class="n">kallisto</span> <span class="k">index</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="n">transcriptome</span><span class="p">.</span><span class="n">fa</span>
-<span class="n">kallisto</span> <span class="n">quant</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="o">-</span><span class="n">o …</span></pre></div>
-		<p class="continue"><a href="/running-kallisto.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
 
