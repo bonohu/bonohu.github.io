@@ -113,7 +113,7 @@
 <article>
 	<h2>Perl in awk mode</h2>
 	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
-<div class="highlight"><pre><span></span>perl -anle  &#39;print &quot;$F[0]\t$F[3]&quot; if ($F[3] &gt; 0)&#39;
+<div class="highlight"><pre><span></span><span class="nv">perl</span> <span class="o">-</span><span class="nv">anle</span>  <span class="s1">&#39;</span><span class="s">print &quot;$F[0]</span><span class="se">\t</span><span class="s">$F[3]&quot; if ($F[3] &gt; 0)</span><span class="s1">&#39;</span>
 </pre></div>
 
 

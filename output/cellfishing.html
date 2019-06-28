@@ -114,44 +114,44 @@
 	<h2>CellFishing</h2>
 	<p>I tried to use <a href="https://doi.org/10.1101/374462">CellFishing</a> written in <a href="https://julialang.org">Julia</a>. 
 It was my first time to use Julia, so I started from the installation of Julia with Homebrew.</p>
-<div class="highlight"><pre><span></span># Install Julia
-brew cask install julia
-# Install CellFishing
-julia -e &#39;using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))&#39;
-# Run test for CellFishing
-julia -e &#39;using Pkg; Pkg.test(&quot;CellFishing&quot;)&#39;
-# git clone CellFishing
-git clone https://github.com/bicycle1885/CellFishing.jl
+<div class="highlight"><pre><span></span># <span class="nv">Install</span> <span class="nv">Julia</span>
+<span class="nv">brew</span> <span class="nv">cask</span> <span class="nv">install</span> <span class="nv">julia</span>
+# <span class="nv">Install</span> <span class="nv">CellFishing</span>
+<span class="nv">julia</span> <span class="o">-</span><span class="nv">e</span> <span class="s1">&#39;</span><span class="s">using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))</span><span class="s1">&#39;</span>
+# <span class="nv">Run</span> <span class="nv">test</span> <span class="k">for</span> <span class="nv">CellFishing</span>
+<span class="nv">julia</span> <span class="o">-</span><span class="nv">e</span> <span class="s1">&#39;</span><span class="s">using Pkg; Pkg.test(&quot;CellFishing&quot;)</span><span class="s1">&#39;</span>
+# <span class="nv">git</span> <span class="nv">clone</span> <span class="nv">CellFishing</span>
+<span class="nv">git</span> <span class="nv">clone</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">bicycle1885</span><span class="o">/</span><span class="nv">CellFishing</span>.<span class="nv">jl</span>
 </pre></div>
 
 
 <p>After installing julia, I followed the instruction in <a href="https://github.com/bicycle1885/CellFishing.jl">CellFishing</a> website, but the test code was failed. 
 According to CellFishing developer, the reason for that failure was that <code>zstd</code> was missing. So I installed <code>zstd</code>.</p>
-<div class="highlight"><pre><span></span># Install zstd via Homebrew
-brew install -v zstd
+<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">Install</span> <span class="n">zstd</span> <span class="n">via</span> <span class="n">Homebrew</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="o">-</span><span class="n">v</span> <span class="n">zstd</span>
 </pre></div>
 
 
 <p>And I tried command-line interface for CellFishing.
 Some packages (<code>HDF5</code> and <code>DocOpt</code>) were requred to run <code>cellfishing build</code> command.</p>
-<div class="highlight"><pre><span></span># Install required packages in julia
-julia -e &#39;using Pkg; Pkg.add(&quot;HDF5&quot;)&#39;
-julia -e &#39;using Pkg; Pkg.add(&quot;DocOpt&quot;)&#39;
+<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">Install</span> <span class="n">required</span> <span class="n">packages</span> <span class="k">in</span> <span class="n">julia</span>
+<span class="n">julia</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;using Pkg; Pkg.add(&quot;HDF5&quot;)&#39;</span>
+<span class="n">julia</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;using Pkg; Pkg.add(&quot;DocOpt&quot;)&#39;</span>
 </pre></div>
 
 
 <p>Of course, data for the search was required. It could be downloaded from 
 http://bimsbstatic.mdc-berlin.de/rajewsky/PSCA/all_sgete_4GU75.loom.gz liked from <a href="https://shiny.mdc-berlin.de/psca/">Planaria Single Cell Atlas website</a>.</p>
-<div class="highlight"><pre><span></span># Getting data for the search
-curl -O http://bimsbstatic.mdc-berlin.de/rajewsky/PSCA/all_sgete_4GU75.loom.gz 
-gzip -dc all_sgete_4GU75.loom.gz &gt; Plass2018.dge.loom
+<div class="highlight"><pre><span></span># <span class="nv">Getting</span> <span class="nv">data</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">search</span>
+<span class="nv">curl</span> <span class="o">-</span><span class="nv">O</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">bimsbstatic</span>.<span class="nv">mdc</span><span class="o">-</span><span class="nv">berlin</span>.<span class="nv">de</span><span class="o">/</span><span class="nv">rajewsky</span><span class="o">/</span><span class="nv">PSCA</span><span class="o">/</span><span class="nv">all_sgete_4GU75</span>.<span class="nv">loom</span>.<span class="nv">gz</span> 
+<span class="nv">gzip</span> <span class="o">-</span><span class="nv">dc</span> <span class="nv">all_sgete_4GU75</span>.<span class="nv">loom</span>.<span class="nv">gz</span> <span class="o">&gt;</span> <span class="nv">Plass2018</span>.<span class="nv">dge</span>.<span class="nv">loom</span>
 </pre></div>
 
 
 <p>After getting the file, I successfully ran the code!</p>
-<div class="highlight"><pre><span></span># Run CellFishing
-./bin/cellfishing build Plass2018.dge.loom
-./bin/cellfishing search Plass2018.dge.loom.cf Plass2018.dge.loom &gt;neighbors.tsv
+<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">Run</span> <span class="n">CellFishing</span>
+<span class="p">.</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cellfishing</span> <span class="n">build</span> <span class="n">Plass2018</span><span class="p">.</span><span class="n">dge</span><span class="p">.</span><span class="n">loom</span>
+<span class="p">.</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">cellfishing</span> <span class="k">search</span> <span class="n">Plass2018</span><span class="p">.</span><span class="n">dge</span><span class="p">.</span><span class="n">loom</span><span class="p">.</span><span class="n">cf</span> <span class="n">Plass2018</span><span class="p">.</span><span class="n">dge</span><span class="p">.</span><span class="n">loom</span> <span class="o">&gt;</span><span class="n">neighbors</span><span class="p">.</span><span class="n">tsv</span>
 </pre></div>
 	<hr/>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 火 06 11月 2018.</h6>

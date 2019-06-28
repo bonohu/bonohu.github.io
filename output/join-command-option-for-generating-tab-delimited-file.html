@@ -113,20 +113,20 @@
 <article>
 	<h2>join command option for generating tab-delimited file</h2>
 	<p>When we want to join two files by a same key into one file, we can use <code>join</code> command. We can join lines by a first column value of tab-delimited files.</p>
-<div class="highlight"><pre><span></span>join -j 1 file1 file2
+<div class="highlight"><pre><span></span><span class="k">join</span> <span class="o">-</span><span class="n">j</span> <span class="mi">1</span> <span class="n">file1</span> <span class="n">file2</span>
 </pre></div>
 
 
 <p>Indeed, <code>join</code> command itself is very useful, default output is not tab-delimited text, but space-delimited text. It is not good for us because most of data are tab-delimited. I just noticed an option for <em>tab-delimited</em> output.</p>
-<div class="highlight"><pre><span></span>join -j 1 -t &quot;$(printf &#39;\011&#39;)&quot; file1 file2
+<div class="highlight"><pre><span></span><span class="k">join</span> <span class="o">-</span><span class="n">j</span> <span class="mi">1</span> <span class="o">-</span><span class="n">t</span> <span class="ss">&quot;$(printf &#39;\011&#39;)&quot;</span> <span class="n">file1</span> <span class="n">file2</span>
 </pre></div>
 
 
 <p>It is required that files to join must be sorted. If not so, error will occur.</p>
 <p><code>join: file1:7: is not sorted</code></p>
 <p>Two files must be sorted like this.</p>
-<div class="highlight"><pre><span></span>sort -u file1 &gt; file1s
-sort -u file2 &gt; file2s
+<div class="highlight"><pre><span></span><span class="n">sort</span> <span class="o">-</span><span class="n">u</span> <span class="n">file1</span> <span class="o">&gt;</span> <span class="n">file1s</span>
+<span class="n">sort</span> <span class="o">-</span><span class="n">u</span> <span class="n">file2</span> <span class="o">&gt;</span> <span class="n">file2s</span>
 </pre></div>
 
 

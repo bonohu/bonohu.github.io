@@ -124,7 +124,7 @@
 	<h3><a href="/join-files-by-key.html">Join files by key</a></h3>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 日 25 3月 2018.</h6>
 	<p>Joining two files by key in the first column of files can be easily done by using UNIX command below.</p>
-<div class="highlight"><pre><span></span>join -j 1 file1.txt file2.txt
+<div class="highlight"><pre><span></span><span class="k">join</span> <span class="o">-</span><span class="n">j</span> <span class="mi">1</span> <span class="n">file1</span><span class="p">.</span><span class="n">txt</span> <span class="n">file2</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 
@@ -203,7 +203,7 @@ In recent years, I regularly use <code>blastdbcmd</code> in NCBI BLAST suite. To
 	<h3><a href="/perl-in-awk-mode.html">Perl in awk mode</a></h3>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 月 05 2月 2018.</h6>
 	<p>When I want to extract data by numeric value in other column, Perl in awk mode might be useful. It is often the case that I forget the option for that in Perl, so I took a note this time.</p>
-<div class="highlight"><pre><span></span>perl -anle  &#39;print &quot;$F[0]\t$F[3]&quot; if ($F …</pre></div>
+<div class="highlight"><pre><span></span><span class="nv">perl</span> <span class="o">-</span><span class="nv">anle</span>  <span class="s1">&#39;</span><span class="s">print &quot;$F[0]</span><span class="se">\t</span><span class="s">$F[3]&quot; if ($F …</span></pre></div>
 		<p class="continue"><a href="/perl-in-awk-mode.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
@@ -211,8 +211,8 @@ In recent years, I regularly use <code>blastdbcmd</code> in NCBI BLAST suite. To
 	<h3><a href="/running-kallisto.html">Running kallisto</a></h3>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
 	<p>If a transcriptome sequence set is available for the organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
-<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
-kallisto quant -i index -o …</pre></div>
+<div class="highlight"><pre><span></span><span class="n">kallisto</span> <span class="k">index</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="n">transcriptome</span><span class="p">.</span><span class="n">fa</span>
+<span class="n">kallisto</span> <span class="n">quant</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="o">-</span><span class="n">o …</span></pre></div>
 		<p class="continue"><a href="/running-kallisto.html">Continue reading &raquo;</a></p>
 </article>
 <hr />

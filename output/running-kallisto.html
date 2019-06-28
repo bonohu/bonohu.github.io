@@ -113,20 +113,20 @@
 <article>
 	<h2>Running kallisto</h2>
 	<p>If a transcriptome sequence set is available for the organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
-<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
-kallisto quant -i index -o results/ -t 4 test_1.fq test_2.fq
+<div class="highlight"><pre><span></span><span class="n">kallisto</span> <span class="k">index</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="n">transcriptome</span><span class="p">.</span><span class="n">fa</span>
+<span class="n">kallisto</span> <span class="n">quant</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="o">-</span><span class="n">o</span> <span class="n">results</span><span class="o">/</span> <span class="o">-</span><span class="n">t</span> <span class="mi">4</span> <span class="n">test_1</span><span class="p">.</span><span class="n">fq</span> <span class="n">test_2</span><span class="p">.</span><span class="n">fq</span>
 </pre></div>
 
 
 <p>This command above is for <strong>paired end</strong> sequence. </p>
 <p>The command can accept gzipped FASTA file for indexing.</p>
-<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa.gz
+<div class="highlight"><pre><span></span><span class="n">kallisto</span> <span class="k">index</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="n">transcriptome</span><span class="p">.</span><span class="n">fa</span><span class="p">.</span><span class="n">gz</span>
 </pre></div>
 
 
 <p>I first tried bzipped(bzip2) FASTQ files for quant, but it failed. FASTQ files must be uncompressed.</p>
 <p>For <strong>single end</strong>,  <em>fragment length</em> must be specified by <code>-l</code> option for runnging kallisto quant.</p>
-<div class="highlight"><pre><span></span>kallisto quant -i index -o results/ -t 4 --single  -l 100 -s 20 test.fq 
+<div class="highlight"><pre><span></span><span class="n">kallisto</span> <span class="n">quant</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="o">-</span><span class="n">o</span> <span class="n">results</span><span class="o">/</span> <span class="o">-</span><span class="n">t</span> <span class="mi">4</span> <span class="c1">--single  -l 100 -s 20 test.fq </span>
 </pre></div>
 
 

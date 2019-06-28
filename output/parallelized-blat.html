@@ -114,7 +114,7 @@
 	<h2>parallelized BLAT</h2>
 	<p>As I had to map assembled reads to the genomic sequence, I used BLAT (the BLAST-like Alignment Tool) for that purpose. BLAT was so fast for landing reads to genomic sequence, but it can be slow if reads are so many. I thought it would be so nice to have multi-threaded BLAT.</p>
 <p>And, <a href="https://github.com/icebert/pblat">there is</a>! Just <code>git clone https://github.com/icebert/pblat</code> and then <code>make</code>. <code>pblat</code> binary file will be generated. It works very well with a command like below.</p>
-<div class="highlight"><pre><span></span>time pblat -threads=4 refgenome.fa query.fa output.psl
+<div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">pblat</span> <span class="o">-</span><span class="n">threads</span><span class="o">=</span><span class="mi">4</span> <span class="n">refgenome</span><span class="p">.</span><span class="n">fa</span> <span class="n">query</span><span class="p">.</span><span class="n">fa</span> <span class="k">output</span><span class="p">.</span><span class="n">psl</span>
 </pre></div>
 
 

@@ -62,8 +62,8 @@
 						<li><label>Categories</label></li>
 							<li ><a href="/category/dbcls.html">DBCLS</a></li>
 							<li ><a href="/category/misc.html">misc</a></li>
-							<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-							<li class="active"><a href="/category/shell.html">shell</a></li>
+							<li class="active"><a href="/category/rnaseq.html">rnaseq</a></li>
+							<li ><a href="/category/shell.html">shell</a></li>
 
 						<li><label>Links</label></li>
 							<li><a href="http://bonohu.jp/">Dr.Bono's website</a></li>
@@ -96,8 +96,8 @@
 						<ul class="left">
 								<li ><a href="/category/dbcls.html">DBCLS</a></li>
 								<li ><a href="/category/misc.html">misc</a></li>
-								<li ><a href="/category/rnaseq.html">rnaseq</a></li>
-								<li class="active"><a href="/category/shell.html">shell</a></li>
+								<li class="active"><a href="/category/rnaseq.html">rnaseq</a></li>
+								<li ><a href="/category/shell.html">shell</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                                                              
@@ -111,25 +111,44 @@
 						<!-- Main Content -->
 						<div class="medium-9 small-12 columns" role="content">
 <article>
-	<h2>Join files by key</h2>
-	<p>Joining two files by key in the first column of files can be easily done by using UNIX command below.</p>
-<div class="highlight"><pre><span></span><span class="k">join</span> <span class="o">-</span><span class="n">j</span> <span class="mi">1</span> <span class="n">file1</span><span class="p">.</span><span class="n">txt</span> <span class="n">file2</span><span class="p">.</span><span class="n">txt</span>
+	<h2>Running salmon via CWL</h2>
+	<p>If a transcriptome sequence set is available for the organism, <a href="https://combine-lab.github.io/salmon/">salmon</a> can be used for transcript quantification.
+<code>cwltool</code> must be installed in advance by <code>conda install cwltool</code> or <code>pip install cwltool</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="c1"># number of threads to use</span>
+<span class="nv">p</span><span class="o">=</span><span class="m">6</span>
+<span class="c1"># workspace: Donwloads directory</span>
+<span class="nb">cd</span> ~/Downloads/
+<span class="c1"># git clone pitagora-cwl</span>
+git clone https://github.com/pitagora-network/pitagora-cwl
+<span class="c1"># retrieve human reference transcriptome</span>
+curl -O ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_30/gencode.v30.transcripts.fa.gz
+<span class="c1"># make salmon index</span>
+cwltool pitagora-cwl/tools/salmon/index/salmon_index.cwl --index_name Human_gencode_salmon --transcript_fasta gencode.v30.transcripts.fa.gz --nthreads <span class="nv">$p</span>
+<span class="c1"># run salmon quant</span>
+<span class="k">for</span> srr in DRR100656 DRR100657<span class="p">;</span> <span class="k">do</span>
+  cwltool pitagora-cwl/tools/salmon/quant/paired_end/salmon_quant_pe.cwl --fq1 <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_1_val_1.fq.gz --fq2 <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_2_val_2.fq.gz --index_dir Human_gencode_salmon --nthreads <span class="nv">$p</span> --quant_out_dir <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_salmon_quant
+  <span class="k">done</span>
 </pre></div>
+</td></tr></table>
 
-
-<p>This is very useful command, but the output is space-delimited by default.
-In order to get the output by tab-delimited, following option for <code>join</code> is effective.</p>
-<div class="highlight"><pre><span></span><span class="k">join</span> <span class="o">-</span><span class="n">j</span> <span class="mi">1</span> <span class="o">-</span><span class="n">t</span> <span class="ss">&quot;$(printf &#39;\011&#39;)&quot;</span> <span class="n">file1</span><span class="p">.</span><span class="n">txt</span> <span class="n">file2</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
-
-
-<p>Two files must be sorted and non-redundant before running <code>join</code> command.
-<code>sort</code> command with <code>-u</code> (unique) option should be applied.</p>
-<div class="highlight"><pre><span></span><span class="n">sort</span> <span class="o">-</span><span class="n">u</span> <span class="n">file1</span><span class="p">.</span><span class="n">txt</span> <span class="o">&gt;</span> <span class="n">file1s</span><span class="p">.</span><span class="n">txt</span>
-<span class="n">mv</span> <span class="n">file1s</span><span class="p">.</span><span class="n">txt</span> <span class="n">file1</span><span class="p">.</span><span class="n">txt</span>
-</pre></div>
+<p>This command above is for <strong>paired end</strong> sequence.</p>
 	<hr/>
-	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 日 25 3月 2018.</h6>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
 </article>
 
 <hr/>

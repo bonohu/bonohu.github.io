@@ -114,8 +114,8 @@
 	<h2>Retrieve a subset of sequence dataset</h2>
 	<p>In order to extract a set of sequence from FASTA-formatted file (both in nucleotides and peptides), several commands can be used to do so.
 In recent years, I regularly use <code>blastdbcmd</code> in NCBI BLAST suite. To run this command, the file must be indexed by <code>makeblastdb</code> with the option below. This command is also needed to run the BLAST search, but additional options(<code>-parse_seqids</code> and others) are needed for the sequence retrieval.</p>
-<div class="highlight"><pre><span></span>makeblastdb -in hoge.fa -dbtype prot -hash_index -parse_seqids
-blastdbcmd -db hoge.fa -entry_batch idlist.txt
+<div class="highlight"><pre><span></span><span class="n">makeblastdb</span> <span class="o">-</span><span class="k">in</span> <span class="n">hoge</span><span class="p">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">dbtype</span> <span class="n">prot</span> <span class="o">-</span><span class="n">hash_index</span> <span class="o">-</span><span class="n">parse_seqids</span>
+<span class="n">blastdbcmd</span> <span class="o">-</span><span class="n">db</span> <span class="n">hoge</span><span class="p">.</span><span class="n">fa</span> <span class="o">-</span><span class="n">entry_batch</span> <span class="n">idlist</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 
