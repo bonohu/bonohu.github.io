@@ -118,7 +118,7 @@
 </blockquote>
 <p>Genome annotation file (GTF) is not required in the execution of HISAT2 itself.</p>
 <p>First of all, index for HISAT2 should be constructed unless pre-calculated indexes are available (indexes for popular genomes are pre-calculated and can be downloaded from <a href="https://ccb.jhu.edu/software/hisat2/index.shtml">HISAT2 website</a> ). When the FASTA-formatted genome is <code>hogenome.fa</code> and the name of that index is <code>hoge</code>, command to build the index is below.</p>
-<div class="highlight"><pre><span></span>hisat2-build -p 4 hogenome.fa hoge
+<div class="highlight"><pre><span></span><span class="n">hisat2</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">p</span> <span class="mi">4</span> <span class="n">hogenome</span><span class="p">.</span><span class="n">fa</span> <span class="n">hoge</span>
 </pre></div>
 
 
@@ -142,7 +142,7 @@ hisat2 -p <span class="nv">$p</span> -x <span class="nv">$x</span> --dta -1 <spa
 
 <p>Because <code>hisat2</code> outputs SAM-formatted alignment file by default, output is designed to be converted to BAM file using <code>samtools view</code>. Additionally the BAM file is designed to be converted to be sorted using <code>samtools sort</code> as the BAM file generated is not sorted, but the file is often needed to be sorted in other program.</p>
 <p>Command to run the script is below.</p>
-<div class="highlight"><pre><span></span>time sh hisat2.sh sample
+<div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">sh</span> <span class="n">hisat2</span><span class="p">.</span><span class="n">sh</span> <span class="n">sample</span>
 </pre></div>
 
 

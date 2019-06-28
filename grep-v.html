@@ -114,7 +114,7 @@
 	<h2>grep -v</h2>
 	<p><code>grep</code> has various options.
 I frequently use <code>-v</code> option to filter lines without the keyword.</p>
-<div class="highlight"><pre><span></span>grep -v human data.txt
+<div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">v</span> <span class="n">human</span> <span class="k">data</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 
@@ -123,7 +123,7 @@ We can filter <em>out</em> lines with keyword <em>human</em>. </p>
 <p>Other example is to filter the lines which have a value in the first column.
 When the first column is missing, head of the line is '\t' (tab character) in the tab-deliminated text.
 We can make use of <code>grep -v</code> command below to filter out the lines without the first column.</p>
-<div class="highlight"><pre><span></span>grep -v ^$&#39;\t&#39; data.txt
+<div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">v</span> <span class="o">^</span><span class="err">$</span><span class="s1">&#39;\t&#39;</span> <span class="k">data</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 

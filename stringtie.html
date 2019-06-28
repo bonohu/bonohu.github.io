@@ -118,7 +118,7 @@
 </blockquote>
 <p>The pipeline to process data by HISAT2 and StringTie is similar to that by TopHat and Cufflinks. Genome annotation file (GTF) can be used in this stage.</p>
 <p>Sorted BAM file (<code>sample.bam</code>) is an intial input of the execution of <code>stringtie</code>.</p>
-<div class="highlight"><pre><span></span>stringtie sample.bam -p 4 -G hogenome.gtf -o gtf/sample.gtf -A abd/sample.txt
+<div class="highlight"><pre><span></span><span class="n">stringtie</span> <span class="n">sample</span><span class="p">.</span><span class="n">bam</span> <span class="o">-</span><span class="n">p</span> <span class="mi">4</span> <span class="o">-</span><span class="k">G</span> <span class="n">hogenome</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">o</span> <span class="n">gtf</span><span class="o">/</span><span class="n">sample</span><span class="p">.</span><span class="n">gtf</span> <span class="o">-</span><span class="n">A</span> <span class="n">abd</span><span class="o">/</span><span class="n">sample</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 

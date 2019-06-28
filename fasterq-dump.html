@@ -120,9 +120,9 @@
 <ol>
 <li>Just specify a run ID of SRA.</li>
 </ol>
-<div class="highlight"><pre><span></span># Just fasterq-dump
-% fasterq-dump DRR100656
-142.09s user 78.79s system 10% cpu 33:32.82 total
+<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">Just</span> <span class="n">fasterq</span><span class="o">-</span><span class="n">dump</span>
+<span class="o">%</span> <span class="n">fasterq</span><span class="o">-</span><span class="n">dump</span> <span class="n">DRR100656</span>
+<span class="mi">142</span><span class="p">.</span><span class="mi">09</span><span class="n">s</span> <span class="k">user</span> <span class="mi">78</span><span class="p">.</span><span class="mi">79</span><span class="n">s</span> <span class="k">system</span> <span class="mi">10</span><span class="o">%</span> <span class="n">cpu</span> <span class="mi">33</span><span class="p">:</span><span class="mi">32</span><span class="p">.</span><span class="mi">82</span> <span class="n">total</span>
 </pre></div>
 
 
@@ -130,10 +130,10 @@
 <ol>
 <li>Download SRA-formatted file from DDBJ DRA and dump it.</li>
 </ol>
-<div class="highlight"><pre><span></span># Download SRA from DDBJ and then fasterq-dump
-% curl -O ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/sra/ByExp/sra/DRX/DRX094/DRX094089/DRR100656/DRR100656.sra
-% fasterq-dump DRR100657.sra
-162.76s user 47.46s system 242% cpu 1:26.76 total
+<div class="highlight"><pre><span></span># <span class="nv">Download</span> <span class="nv">SRA</span> <span class="nv">from</span> <span class="nv">DDBJ</span> <span class="nv">and</span> <span class="k">then</span> <span class="nv">fasterq</span><span class="o">-</span><span class="nv">dump</span>
+<span class="o">%</span> <span class="nv">curl</span> <span class="o">-</span><span class="nv">O</span> <span class="nv">ftp</span>:<span class="o">//</span><span class="nv">ftp</span>.<span class="nv">ddbj</span>.<span class="nv">nig</span>.<span class="nv">ac</span>.<span class="nv">jp</span><span class="o">/</span><span class="nv">ddbj_database</span><span class="o">/</span><span class="nv">dra</span><span class="o">/</span><span class="nv">sra</span><span class="o">/</span><span class="nv">ByExp</span><span class="o">/</span><span class="nv">sra</span><span class="o">/</span><span class="nv">DRX</span><span class="o">/</span><span class="nv">DRX094</span><span class="o">/</span><span class="nv">DRX094089</span><span class="o">/</span><span class="nv">DRR100656</span><span class="o">/</span><span class="nv">DRR100656</span>.<span class="nv">sra</span>
+<span class="o">%</span> <span class="nv">fasterq</span><span class="o">-</span><span class="nv">dump</span> <span class="nv">DRR100657</span>.<span class="nv">sra</span>
+<span class="mi">162</span>.<span class="mi">76</span><span class="nv">s</span> <span class="nv">user</span> <span class="mi">47</span>.<span class="mi">46</span><span class="nv">s</span> <span class="nv">system</span> <span class="mi">242</span><span class="o">%</span> <span class="nv">cpu</span> <span class="mi">1</span>:<span class="mi">26</span>.<span class="mi">76</span> <span class="nv">total</span>
 </pre></div>
 
 

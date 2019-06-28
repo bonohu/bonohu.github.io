@@ -118,10 +118,10 @@
 SRR mode which directly fetches SRA file from NCBI worked fine, but FASTQ mode
 was failed after trimming with the error below.
 It seems that the file setting for salmon was incorrect.</p>
-<div class="highlight"><pre><span></span>Exception : [
-The following errors were detected with the read files
-======================================================
-ERROR: file [fq/ERRxxxxxx_trimmed …</pre></div>
+<div class="highlight"><pre><span></span><span class="nv">Exception</span> : [
+<span class="nv">The</span> <span class="nv">following</span> <span class="nv">errors</span> <span class="nv">were</span> <span class="nv">detected</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">read</span> <span class="nv">files</span>
+<span class="o">======================================================</span>
+<span class="nv">ERROR</span>: <span class="nv">file</span> [<span class="nv">fq</span><span class="o">/</span><span class="nv">ERRxxxxxx_trimmed …</span></pre></div>
 		<p class="continue"><a href="/running-ikra.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
@@ -130,7 +130,7 @@ ERROR: file [fq/ERRxxxxxx_trimmed …</pre></div>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 金 19 4月 2019.</h6>
 	<p><code>grep</code> has various options.
 I frequently use <code>-v</code> option to filter lines without the keyword.</p>
-<div class="highlight"><pre><span></span>grep -v human data.txt
+<div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">v</span> <span class="n">human</span> <span class="k">data</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 
@@ -145,7 +145,7 @@ We can filter <em>out</em> lines with keyword <em>human</em>. </p>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/shell.html">shell</a> on 木 18 4月 2019.</h6>
 	<p>It turned out that the command I regularly use to search a bunch of data is not known to others.</p>
 <p>I frequently use <code>fgrep</code> to grep against a list of keywords (i.e. IDs).</p>
-<div class="highlight"><pre><span></span>fgrep -f keywords.txt data.txt
+<div class="highlight"><pre><span></span><span class="n">fgrep</span> <span class="o">-</span><span class="n">f</span> <span class="n">keywords</span><span class="p">.</span><span class="n">txt</span> <span class="k">data</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 
@@ -160,8 +160,8 @@ We can filter <em>out</em> lines with keyword <em>human</em>. </p>
 This was <a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon78">78th SPARQLthon</a>.</p>
 <p>First, I tried to execute SPARQL from UNIX command line for the integration of unfamiliar data.
 According to the SPARQL book (p145), I could make it.</p>
-<div class="highlight"><pre><span></span># command line execution of SPARQL 
-% curl -F query=@hoge.rq -H &quot;Accept: application/sparql-results …</pre></div>
+<div class="highlight"><pre><span></span># <span class="nv">command</span> <span class="nv">line</span> <span class="nv">execution</span> <span class="nv">of</span> <span class="nv">SPARQL</span> 
+<span class="o">%</span> <span class="nv">curl</span> <span class="o">-</span><span class="nv">F</span> <span class="nv">query</span><span class="o">=</span>@<span class="nv">hoge</span>.<span class="nv">rq</span> <span class="o">-</span><span class="nv">H</span> <span class="s2">&quot;</span><span class="s">Accept: application/sparql-results …</span></pre></div>
 		<p class="continue"><a href="/sparqlthon78.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
@@ -176,8 +176,7 @@ According to the SPARQL book (p145), I could make it.</p>
 <ol>
 <li>Just specify a run ID of SRA.</li>
 </ol>
-<div class="highlight"><pre><span></span># Just fasterq-dump
-% fasterq-dump …</pre></div>
+<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">Just</span> <span class="n">fasterq</span><span class="o">-</span><span class="n">dump …</span></pre></div>
 		<p class="continue"><a href="/fasterq-dump.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
@@ -195,11 +194,11 @@ I also joined <a href="https://github.com/pitagora-galaxy/cwl/wiki/CWL-Workshop-
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 火 06 11月 2018.</h6>
 	<p>I tried to use <a href="https://doi.org/10.1101/374462">CellFishing</a> written in <a href="https://julialang.org">Julia</a>. 
 It was my first time to use Julia, so I started from the installation of Julia with Homebrew.</p>
-<div class="highlight"><pre><span></span># Install Julia
-brew cask install julia
-# Install CellFishing
-julia -e &#39;using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))&#39;
-# Run …</pre></div>
+<div class="highlight"><pre><span></span># <span class="nv">Install</span> <span class="nv">Julia</span>
+<span class="nv">brew</span> <span class="nv">cask</span> <span class="nv">install</span> <span class="nv">julia</span>
+# <span class="nv">Install</span> <span class="nv">CellFishing</span>
+<span class="nv">julia</span> <span class="o">-</span><span class="nv">e</span> <span class="s1">&#39;</span><span class="s">using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))</span><span class="s1">&#39;</span>
+# <span class="nv">Run …</span></pre></div>
 		<p class="continue"><a href="/cellfishing.html">Continue reading &raquo;</a></p>
 </article>
 <hr />

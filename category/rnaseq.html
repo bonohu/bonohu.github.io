@@ -123,10 +123,10 @@
 SRR mode which directly fetches SRA file from NCBI worked fine, but FASTQ mode
 was failed after trimming with the error below.
 It seems that the file setting for salmon was incorrect.</p>
-<div class="highlight"><pre><span></span>Exception : [
-The following errors were detected with the read files
-======================================================
-ERROR: file [fq/ERRxxxxxx_trimmed …</pre></div>
+<div class="highlight"><pre><span></span><span class="nv">Exception</span> : [
+<span class="nv">The</span> <span class="nv">following</span> <span class="nv">errors</span> <span class="nv">were</span> <span class="nv">detected</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">read</span> <span class="nv">files</span>
+<span class="o">======================================================</span>
+<span class="nv">ERROR</span>: <span class="nv">file</span> [<span class="nv">fq</span><span class="o">/</span><span class="nv">ERRxxxxxx_trimmed …</span></pre></div>
 		<p class="continue"><a href="/running-ikra.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
@@ -141,8 +141,7 @@ ERROR: file [fq/ERRxxxxxx_trimmed …</pre></div>
 <ol>
 <li>Just specify a run ID of SRA.</li>
 </ol>
-<div class="highlight"><pre><span></span># Just fasterq-dump
-% fasterq-dump …</pre></div>
+<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">Just</span> <span class="n">fasterq</span><span class="o">-</span><span class="n">dump …</span></pre></div>
 		<p class="continue"><a href="/fasterq-dump.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
@@ -151,11 +150,11 @@ ERROR: file [fq/ERRxxxxxx_trimmed …</pre></div>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 火 06 11月 2018.</h6>
 	<p>I tried to use <a href="https://doi.org/10.1101/374462">CellFishing</a> written in <a href="https://julialang.org">Julia</a>. 
 It was my first time to use Julia, so I started from the installation of Julia with Homebrew.</p>
-<div class="highlight"><pre><span></span># Install Julia
-brew cask install julia
-# Install CellFishing
-julia -e &#39;using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))&#39;
-# Run …</pre></div>
+<div class="highlight"><pre><span></span># <span class="nv">Install</span> <span class="nv">Julia</span>
+<span class="nv">brew</span> <span class="nv">cask</span> <span class="nv">install</span> <span class="nv">julia</span>
+# <span class="nv">Install</span> <span class="nv">CellFishing</span>
+<span class="nv">julia</span> <span class="o">-</span><span class="nv">e</span> <span class="s1">&#39;</span><span class="s">using Pkg; Pkg.add(PackageSpec(url=&quot;git://github.com/bicycle1885/CellFishing.jl.git&quot;))</span><span class="s1">&#39;</span>
+# <span class="nv">Run …</span></pre></div>
 		<p class="continue"><a href="/cellfishing.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
@@ -205,9 +204,33 @@ Reason: image not found</p>
 	<h3><a href="/running-kallisto.html">Running kallisto</a></h3>
 	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
 	<p>If a transcriptome sequence set is available for the organism, <a href="https://pachterlab.github.io/kallisto/">kallisto</a> can be used for transcript quantification. The <code>kallisto</code> version I used was <code>0.43.1</code>, which was previously installed using Homebrew by the command like <code>brew install kallisto</code>.</p>
-<div class="highlight"><pre><span></span>kallisto index -i index transcriptome.fa
-kallisto quant -i index -o …</pre></div>
+<div class="highlight"><pre><span></span><span class="n">kallisto</span> <span class="k">index</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="n">transcriptome</span><span class="p">.</span><span class="n">fa</span>
+<span class="n">kallisto</span> <span class="n">quant</span> <span class="o">-</span><span class="n">i</span> <span class="k">index</span> <span class="o">-</span><span class="n">o …</span></pre></div>
 		<p class="continue"><a href="/running-kallisto.html">Continue reading &raquo;</a></p>
+</article>
+<hr />
+<article>
+	<h3><a href="/running-salmon-via-cwl.html">Running salmon via CWL</a></h3>
+	<h6>Written by <a href="/author/bonohu.html">bonohu</a> in <a href="/category/rnaseq.html">rnaseq</a> on 月 22 1月 2018.</h6>
+	<p>If a transcriptome sequence set is available for the organism, <a href="https://combine-lab.github.io/salmon/">salmon</a> can be used for transcript quantification.
+<code>cwltool</code> must be installed in advance by <code>conda install cwltool</code> or <code>pip install cwltool</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="c1"># number of …</span></pre></div></td></tr></table>
+		<p class="continue"><a href="/running-salmon-via-cwl.html">Continue reading &raquo;</a></p>
 </article>
 <hr />
 <article>

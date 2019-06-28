@@ -119,8 +119,8 @@ I asked <a href="https://github.com/manabuishii">Ishii-san</a> about the possibi
 So I tried to code it concurrently.</p>
 <p>I wrote my code with a great <a href="https://github.com/pitagora-galaxy/cwl/wiki/CWL-Start-Guide-JP">reference material (in Japanese)</a> which was shown in CWL Workshop Tokyo 2018.</p>
 <p>For the reference, my original script to run was like <a href="https://github.com/dbcls/AOE/blob/master/00getlistofxRX.sh">this</a>.</p>
-<div class="highlight"><pre><span></span>perl 00getlistofxRX.pl \
-| pigz -c &gt; xRX.json.gz
+<div class="highlight"><pre><span></span><span class="n">perl</span> <span class="mi">00</span><span class="n">getlistofxRX</span><span class="p">.</span><span class="n">pl</span> <span class="err">\</span>
+<span class="o">|</span> <span class="n">pigz</span> <span class="o">-</span><span class="k">c</span> <span class="o">&gt;</span> <span class="n">xRX</span><span class="p">.</span><span class="n">json</span><span class="p">.</span><span class="n">gz</span>
 </pre></div>
 
 
@@ -133,7 +133,7 @@ The files to be used should be described in <code>inputs:</code>.</p>
 There was some trials in setting the output files, but it was not so hard compared with the former issue (additional file inclusion).</p>
 <p>These <code>cwl</code> files were successfully pushed to <a href="https://github.com/dbcls/AOE">GitHub pages</a> and thus <a href="https://view.commonwl.org/workflows/github.com/dbcls/AOE/blob/3ab6db7ca9eb982111e0aa038e03a74183fd06bb/gethoge-and-pigz.cwl">visualized with the power of public web service</a>, where you can see our workflow in a diagram representation. 
 And, my workflow can be run with the command below now!</p>
-<div class="highlight"><pre><span></span>cwltool perl-gethoge.cwl --file 00getlistofxRX.pl  --ipfile IP.txt
+<div class="highlight"><pre><span></span><span class="n">cwltool</span> <span class="n">perl</span><span class="o">-</span><span class="n">gethoge</span><span class="p">.</span><span class="n">cwl</span> <span class="c1">--file 00getlistofxRX.pl  --ipfile IP.txt</span>
 </pre></div>
 
 
