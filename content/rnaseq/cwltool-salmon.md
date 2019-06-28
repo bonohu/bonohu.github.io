@@ -1,5 +1,5 @@
 Title: Running salmon via CWL
-Date: 2018-01-22 18:00
+Date: 2019-06-28 11:00
 
 If a transcriptome sequence set is available for the organism, [salmon](https://combine-lab.github.io/salmon/) can be used for transcript quantification.
 `cwltool` must be installed in advance by `conda install cwltool` or `pip install cwltool`.
