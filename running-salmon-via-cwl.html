@@ -128,7 +128,12 @@
 12
 13
 14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 <span class="c1"># number of threads to use</span>
 <span class="nv">p</span><span class="o">=</span><span class="m">6</span>
 <span class="c1"># workspace: Donwloads directory</span>
@@ -138,10 +143,15 @@ git clone https://github.com/pitagora-network/pitagora-cwl
 <span class="c1"># retrieve human reference transcriptome</span>
 curl -O ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_30/gencode.v30.transcripts.fa.gz
 <span class="c1"># make salmon index</span>
-cwltool pitagora-cwl/tools/salmon/index/salmon_index.cwl --index_name Human_gencode_salmon --transcript_fasta gencode.v30.transcripts.fa.gz --nthreads <span class="nv">$p</span>
+cwltool pitagora-cwl/tools/salmon/index/salmon_index.cwl <span class="se">\</span>
+--nthreads <span class="nv">$p</span> --index_name Human_gencode_salmon <span class="se">\</span>
+--transcript_fasta gencode.v30.transcripts.fa.gz 
 <span class="c1"># run salmon quant</span>
 <span class="k">for</span> srr in DRR100656 DRR100657<span class="p">;</span> <span class="k">do</span>
-  cwltool pitagora-cwl/tools/salmon/quant/paired_end/salmon_quant_pe.cwl --fq1 <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_1_val_1.fq.gz --fq2 <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_2_val_2.fq.gz --index_dir Human_gencode_salmon --nthreads <span class="nv">$p</span> --quant_out_dir <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_salmon_quant
+  cwltool pitagora-cwl/tools/salmon/quant/paired_end/salmon_quant_pe.cwl <span class="se">\</span>
+  --fq1 <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_1_val_1.fq.gz --fq2 <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_2_val_2.fq.gz <span class="se">\</span>
+  --index_dir Human_gencode_salmon --nthreads <span class="nv">$p</span> <span class="se">\</span>
+  --quant_out_dir <span class="si">${</span><span class="nv">srr</span><span class="si">}</span>_salmon_quant
   <span class="k">done</span>
 </pre></div>
 </td></tr></table>
